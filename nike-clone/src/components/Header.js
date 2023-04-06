@@ -1,4 +1,3 @@
-
 import '../styles/Header.css';
 import HeaderLine1 from './HeaderLine1';
 import HeaderLine2 from './HeaderLine2';
@@ -15,4 +14,3 @@ const Header = () => {
 };
 
 export default Header;
-
