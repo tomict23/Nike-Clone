@@ -1,17 +1,18 @@
-import React from "react";
-import Header1 from "./Header1";
-import Header2 from "./Header2";
-import Header3 from "./Header3";
 
-const Header = (props) => {
-    return (
-    <div
-        id='Header'>
-        <Header1></Header1>
-        <Header2></Header2>
-        <Header3></Header3>
-    </div>
-    )
-}
+import '../styles/Header.css';
+import HeaderLine1 from './HeaderLine1';
+import HeaderLine2 from './HeaderLine2';
+import HeaderLine3 from './HeaderLine3';
+
+const Header = () => {
+  return (
+    <>
+      <HeaderLine1 />
+      <HeaderLine2 />
+      <HeaderLine3 />
+    </>
+  );
+};
 
 export default Header;
+
