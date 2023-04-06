@@ -1,0 +1,58 @@
+@font-face {
+  font-family: TradeGothicBoldCondensed;
+  src: url(./fonts/Trade\ Gothic\ Bold\ Condensed\ No.\ 20.otf) format('opentype');
+}
+
+.Footer {
+  width: 100vw;
+  height: 390px;
+  background-color: rgb(17, 17, 17);
+  color: white;
+  padding: 40px 40px 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-body {
+  /* margin: 0px; */
+  /* padding: 0px; */
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  /* overflow: hidden; */
+  width: 170px;
+  height: 274px;
+  gap: 0px;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+
+.link-bold {
+  font-family: TradeGothicBoldCondensed, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#location {
+  /* border: 1px solid red; */
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  align-items: center;
+  position: absolute;
+  bottom: -405px;
+  left: 50px;
+}
+
+#locator-svg {
+  scale: 1.1 1.1 1;
+  position: relative;
+  cursor: pointer;
+}
+
+#curr-country {
+  margin: 0px 8px;
+  font-size: 14px;
+}
