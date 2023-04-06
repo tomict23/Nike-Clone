@@ -5,7 +5,7 @@
 
 .Footer {
   width: 100vw;
-  height: 390px;
+  height: 347px;
   background-color: rgb(17, 17, 17);
   color: white;
   padding: 40px 40px 0 40px;
@@ -13,46 +13,100 @@
   flex-direction: column;
 }
 
+#footer-top {
+  display: flex;
+  flex-direction: row;
+}
+
 .accordion-body {
   /* margin: 0px; */
-  /* padding: 0px; */
+  padding: 5px;
   display: flex;
   flex-direction: column;
   color: #fff;
-  /* overflow: hidden; */
   width: 170px;
-  height: 274px;
+  height: 230px;
+  /* padding-top: 10px; */
   gap: 0px;
   justify-content: space-between;
   /* border: 1px solid red; */
 }
 
-.link-bold {
-  font-family: TradeGothicBoldCondensed, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: bolder;
-  cursor: pointer;
-  margin: 10px;
+#get-help-section {
+  height: 196px;
+}
+#about-nike-section {
+  height: 165px;
 }
 
-#location {
-  /* border: 1px solid red; */
+.link-bold {
+  font-family: TradeGothicBoldCondensed, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  cursor: pointer;
+  margin: 0px;
+  /* border: 1px solid green; */
+}
+
+.link-gray {
+  color: gray;
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#footer-bottom {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+  gap: 10vw;
+  height: 105px;
+  border: 1px solid red;
+}
+
+#loc-copy {
   display: flex;
   width: fit-content;
   height: fit-content;
+
   align-items: center;
-  position: absolute;
-  bottom: -405px;
-  left: 50px;
+  margin: 10px;
+  gap: 18px;
+  /* position: absolute; */
+  /* bottom: -420px; */
+  /* left: 50px; */
+  /* border: 1px solid red; */
+}
+
+#location {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid red; */
 }
 
 #locator-svg {
-  scale: 1.1 1.1 1;
-  position: relative;
+  scale: 1.05 1.05 1;
+  /* position: relative; */
   cursor: pointer;
+  /* border: #7e7e7e solid 1px; */
 }
 
 #curr-country {
-  margin: 0px 8px;
-  font-size: 14px;
+  margin: 3px 8px;
+  font-size: 12.5px;
+  /* border: #7e7e7e solid 1px; */
+}
+
+#copyright-disc {
+  margin: 0px;
+  padding: 0px;
+  color: #7e7e7e;
+  font-size: 12px;
+}
+
+#footer-bottom-right {
+  border: 1px solid red;
+  /* width: 500px; */
+  /* height: 100px; */
 }
