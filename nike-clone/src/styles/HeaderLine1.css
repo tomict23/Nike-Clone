@@ -1,13 +1,14 @@
 .HeaderLine1 {
-  height: 36px;
-  width: 100vw;
-  background: #f5f5f5;
   padding: 0 38px 0 36px;
-  /* max-width: 1920px; */
+  height: 36px;
+  background: #f5f5f5;
   max-height: 60px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   /* border: 1px solid red; */
   margin: 0px;
+  gap: 78%;
 }
 
 .brand-item {
@@ -19,13 +20,7 @@
   /* transform: rotateY(180deg); */
 }
 
-.HeaderLine2 {
-  height: 60px;
-  padding-top: 4px;
-  width: 100vw;
-  background: #ffffff;
-  /* border: 1px solid red; */
-}
+
 
 .nike-logo {
   transform: scale(1.33);
@@ -34,10 +29,24 @@
   width: 15vw;
 }
 
-.HeaderLine3 {
-  box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px inset;
-  background: rgb(247, 247, 247);
-  min-height: 70px;
-  /* overflow: hidden; */
-  /* position: relative; */
+
+.branditems {
+  display: flex;
+}
+.menuoption {
+  display: flex;
+}
+
+.headermenu1 {
+  display: flex;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+#spacer {
+  display: flex;
+  font-size: 11px;
+  margin-top: 1.5%;
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -1,0 +1,42 @@
+.HeaderLine3 {
+    box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px inset;
+    background: rgb(247, 247, 247);
+    min-height: 60px;
+    /* overflow: hidden; */
+    /* position: relative; */
+  }
+  .centerBanner {
+    display: flex;
+    justify-content: center;
+  }
+  .slider {
+    display: flex;
+    justify-content: center;
+  }
+  .banner {
+    display: flex;
+    justify-content: center;
+    gap: 10%
+  }
+  .slider_nodes {
+    display: flex;
+  }
+  .slider_node {
+    display: flex;
+  }
+  .slider_text {
+    margin-left: -5%;
+    white-space: nowrap;
+    width: auto;
+    display: flex;
+    padding-right: 5%;
+  }
+  .slider_link {
+    white-space: nowrap;
+    display: flex;
+  }
+  .arrow {
+    margin-top: 2%;
+    border: none;
+    background-color: inherit;
+  }
