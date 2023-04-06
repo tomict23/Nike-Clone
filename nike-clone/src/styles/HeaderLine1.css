@@ -16,11 +16,11 @@
   justify-content: center;
   height: 100%;
   width: 48px;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
 }
 
 .HeaderLine2 {
-  height: 56px;
+  height: 60px;
   padding-top: 4px;
   width: 100vw;
   background: #ffffff;
@@ -37,7 +37,7 @@
 .HeaderLine3 {
   box-shadow: rgb(229, 229, 229) 0px -1px 0px 0px inset;
   background: rgb(247, 247, 247);
-  min-height: 60px;
+  min-height: 70px;
   /* overflow: hidden; */
   /* position: relative; */
 }
