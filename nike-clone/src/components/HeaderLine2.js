@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 const HeaderLine2 = () => {
   const [hovered, setHovered] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   const hoveredOver = (event) => {
     event.target.style.opacity = .5;
   }
@@ -30,6 +31,16 @@ const HeaderLine2 = () => {
     setIsHovered(false)
     setHovered(false)
   }
+  const mouseOverMenu = () => {
+    setShowDropdown(true)
+    document.querySelector('.hero-container').style.filter = 'blur(5px)';
+    document.querySelector('.Footer').style.filter = 'blur(5px)';
+  }
+  const mouseOutMenu = () => {
+    setShowDropdown(false)
+    document.querySelector('.hero-container').style.filter = 'none';
+    document.querySelector('.Footer').style.filter = 'none';
+  }
   const backgroundStyle1 = {
     backgroundColor: isHovered ? '#e5e5e5' : '#f5f5f5'
   }
@@ -46,8 +57,40 @@ const HeaderLine2 = () => {
             </svg>
         </div>
         <div className='headermenu2'>
-          <div className='menuitem2'>
+          <div onMouseOver={mouseOverMenu} onMouseOut={mouseOutMenu} className='menuitem2'>
             New & Featured
+            <div className={`dropdownHeader2 ${showDropdown ? 'show' : ''}`}>
+              <div>
+                New Arrivals
+                <div>
+                  Shop all
+                </div>
+                <div>
+                  SNKRS Launch Calendar
+                </div>
+                <div>
+                  New & Upcoming Drops
+                </div>
+              </div>
+              <div>
+                Featured
+                <div>
+                  80's Inspired Collection
+                </div>
+                <div>
+                  Picks for Prom
+                </div>
+                <div>
+                  USWNT Jerseys
+                </div>
+                <div>
+                  New in Running
+                </div>
+                <div>
+                  Member Exclusive
+                </div>
+              </div>
+            </div>
           </div>
           <div className='menuitem2'>
             Men
