@@ -1,0 +1,41 @@
+.hero-container {
+    width: calc(100% - 456px);
+    height: 669px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-content: flex-start;
+    position: sticky;
+    top: 40px;
+    padding-left: 48px;
+    margin-left: 8px;
+    max-height: 669px;
+    min-height: 455px;
+}
+
+.thumbnail-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    gap: 8px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.hero-image-container {
+    width: 567px;
+    max-width: 554px;
+    height: 669px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    z-index: -1;
+}

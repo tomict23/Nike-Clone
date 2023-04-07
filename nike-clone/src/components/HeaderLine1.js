@@ -3,17 +3,24 @@ import jordanLogo from '../jordan.svg';
 import converseLogo from '../converse.svg';
 
 const HeaderLine1 = () => {
+  const hoveredOver = (event) => {
+    event.target.style.opacity = .5;
+  }
+  const hoveredOut = (event) => {
+    event.target.style.opacity = 1;
+  }
+
   return (
-    <>
+    <div className='HeaderLine1Base'>
       <div className='HeaderLine1'>
         <div className="branditems">
-          <div className='brand-item'>
+          <div className='brand-item' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
             <img
               src={jordanLogo}
               alt='jordan-logo'
             />
           </div>
-        <div className='brand-item'>
+        <div className='brand-item' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
           <img
             src={converseLogo}
             alt='converse-logo'
@@ -22,30 +29,38 @@ const HeaderLine1 = () => {
       </div>
         <div className='headermenu1'>
           <div className="menuoption">
-            Find a Store
+          <div className='menuText' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
+              Find a Store
+            </div>
             <div id="spacer">
               |
             </div>
           </div>
           <div className="menuoption">
-            Help
+          <div className='menuText' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
+              Help
+            </div>
             <div id="spacer">
               |
             </div>
           </div>
           <div className="menuoption">
-            Join Us
+            <div className='menuText' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
+              Join Us
+            </div>
             <div id="spacer">
               |
             </div>
           </div>
           <div className="menuoption">
-            Sign In
+          <div className='menuText' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
+              Sign In
+            </div>
           </div>
 
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
