@@ -1,19 +1,108 @@
+.Headerline2Container {
+  height: 60px;
+  width: 100%;
+}
 .HeaderLine2 {
-    padding: 0 38px 0 36px;
-    height: 60px;
-    padding-top: 4px;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    gap: 31%
-    /* border: 1px solid red; */
+  padding: 0 38px 0 36px;
+  height: 100%;
+  background: #ffffff;
+  max-width: 1920px;
+  max-height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  .nikeLogoContainer {
+    display: block;
+    margin-left: 12px;
+    height: 59px;
+    width: 59px;
+  }
+  .nikeLogo {
+    transform: scale(1.33);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
   }
   .headermenu2 {
-    margin-left: -2%;
     display: flex;
-    justify-content: center;
+    margin-left: 13%;
   }
   .menuitem2 {
     white-space: nowrap;
-    padding-right: 4%;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+  .searchMenu {
+    display: flex;
+    border-radius: 20px;
+    background: #f5f5f5;
+  }
+  .searchBar {
+    border: none;
+    border-radius: 20px;
+    height: 38px;
+    width: 124px;
+    max-width: 124px;
+    max-height: 38px;
+    padding-left: 48px;
+    padding-right: 8px;
+    margin-top: -.40%;
+    background: #f5f5f5;
+    font-size: 16px;
+    z-index: 1;
+  }
+
+  .searchIcon {
+    position: absolute;
+    border-radius: 20px;
+    padding: 6px 6px 6px 6px;
+    z-index: 2;
+    background: #f5f5f5;
+    cursor: pointer;
+  }
+  .twoIcons {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    gap: 5%
+  }
+  .heart {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 6px 6px 6px 6px;
+    cursor: pointer;
+  }
+  .cart {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 6px 6px 6px 6px;
+    cursor: pointer;
+  }
+  .dropdownHeader2 {
+    position: absolute;
+    background-color: white;
+    width: 1920px;
+    height: 400px;
+    margin-left: -37%;
+    margin-top: 20px;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    pointer-events: none;
+    font-family: inherit;
+    font-size: 16px;
+  }
+  .dropdownHeader2.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
