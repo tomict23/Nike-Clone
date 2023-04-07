@@ -18,113 +18,109 @@ const { listenerCount } = require('stream');
 const dbConn = require('./dbConn');
 const pool = dbConn.getPool();
 
-//Query with "/studio" request:
-app.get('/api/memes' , (request, response, next) => {
-    //console.log("made it inside .get");
-    pool.query('SELECT * FROM memes', (err,result) => {
+app.get('/api/shoes', (req, res) => {
+    pool.query('SELECT * FROM shoes', (err, result) => {
         if (err){
-            return next({})
+            res.status(404).send(err)
         } else {
-            const allMemes = result.rows;
-            response.status(200).send(allMemes);
+            const shoes = result.rows;
+            response.status(200).send(shoes);
         }
     })
 })
 
-app.get('/api/memes/:id', (req, res, next) => {
+app.get('/api/shoes/:id', (req, res) =>{
     const id = Number.parseInt(req.params.id);
-    
-    pool.query('SELECT * FROM memes WHERE id=$1', [id], (err, result, next) =>{
+
+    pool.query('SELECT * FROM shoes WHERE id=$1', [id], (err, result) => {
         if (err){
-            return next({})
+            res.status(404).send(err);
         } else {
-            const meme = result.rows[0];
-            res.status(200).send(meme);
+            const shoe = result.rows;
+            res.status(200).send(shoe);
         }
     })
 })
 
-//CHECKS FOR ANYTHING OTHER THAN "MEMES" AND SENDS ERROR:
-app.get("/api/:word/", function (req, res){
+app.get('/api/review', (req, res) => {
+    pool.query('SELECT review.*, shoe.name AS shoe_name FROM review INNER JOIN shoes ON review.shoes_id = shoes.id;', (err, result) => {
+        if (err) {
+            res.status(404).send(err);
+        } else {
+            const reviews = result.rows;
+            res.status(200).send(reviews); 
+        }
+    })
+})
+
+app.get('/api/review/:id', (req, res) => {
+    const id = Number.parseInt(req.params.id);
+
+    pool.query('SELECT * FROM review WHERE id=$1', [id], (err, result) => {
+        if (err){
+            res.status(404).send(err)
+        } else {
+            const review = result.rows;
+            res.status(200).send(review);
+        }
+    })
+})
+
+app.get('/api/:word', (req, res) => {
     const word = req.params.word;
-    res.status(404).send(`NOT FOUND!! - 505 error - api/${word}/ does not exist`);
-});
-
-
-app.post('/api/memes', (req, res, next) =>{
-    const topText = req.body.toptext;
-    const bottomText = req.body.bottomtext;
-    const url = req.body.url;
-
-    if (!topText || !bottomText || !url){
-        return res.status(400).send("Error in post data, or insufficient data provided for post");
-    } 
-
-    pool.query('INSERT INTO memes (toptext, bottomtext, url) VALUES ($1, $2, $3) RETURNING *;', [topText, bottomText, url], (err,result) => {
-        if (err){
-            return next({})
-        }
-
-        let memeInfo = result.rows[0];
-        res.send(memeInfo);
-    })
+    res.status(405).send(`NOT FOUND!! - 405 ERROR - /api/${word}/ DOES NOT EXIST`)
 })
 
-app.patch('/api/memes/:id', (req, res, next) => {
-    const id = Number.parseInt(req.params.id);
-    const toptext = req.body.toptext;
-    const bottomtext = req.body.bottomtext;
-    const url = req.body.url;
+app.post('/api/shoes/', (req, res) => {
+    const name = req.body.name;
+    const price = req.body.price;
+    const image = req.body.image;
+    const image_array = req.body.image_array;
+    const description = req.body.description;
+    const color_description = req.body.color_description;
+    const size_array = req.body.size_array;
 
-    pool.query('SELECT * FROM memes WHERE id=$1', [id], (err, result, next) =>{
-        if (err){
-            return next({});
-        }
-        
-        let meme = result.rows[0];
+    if (!name || !price || !image || !image_array || !description || !color_description || !size_array){
+        return res.status(407).send("Error in post data or insufficient data provided for post route shoes")
+    }
 
-        if (!meme){
-            res.send("No meme detected")
-        }
-
-        const updatedTopText = toptext || meme.toptext;
-        const updatedBottomText = bottomtext || meme.bottomtext;
-        const updatedUrl = url || meme.url;
-        console.log(updatedTopText, updatedBottomText, updatedUrl);
-
-        pool.query('UPDATE memes SET toptext=$1, bottomtext=$2, url=$3 WHERE id=$4 RETURNING *', [updatedTopText, updatedBottomText, updatedUrl, id], (err, result) =>{
-            if (err){
-                res.send("There was an error updating the table")
-            } else {
-                res.status(200).send(`ID:${id} has been UPDATED `)
-            }  
-        })
-    })
-})
-
-app.delete('/api/memes/:id', (req, res, next) => {
-    const id = Number.parseInt(req.params.id);
-
-    pool.query('DELETE FROM memes WHERE id=$1 RETURNING*', [id], (err,data) => {
-        if (err){
-            res.status(404).send("There was an error with your SQL query for DELETION.")
-        }
-
-        const deleted = data.rows[0];
-
-        if (deleted){
-            res.send(deleted);
+    pool.query('INSERT INTO shoes (name, price, image, image_array, description, color_description, size_array) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING*;', [name, price, image, image_array, description, color_description, size_array], (err, result) => {
+        if (err) {
+            res.status(409).send(err);
         } else {
-            res.send(`This meme id:${id} does not exist => has not been deleted.`)
+            const shoeInfo = result.rows[0];
+            res.status(202).send(shoeInfo)
         }
-        
-    })    
-});
+    })
+})
 
+app.post('/api/review/', (req, res) => {
+    const review_id = req.body.review_id;
+    const stars = req.body.stars;
+    const user_name = req.body.user_name;
+    const date_created = req.body.date_created;
+    const summary = req.body.summary;
+
+    if (!review_id || !stars || !user_name || !date_created || !summary){
+        return res.status(408).send("Error in post data or insufficient data provided for post route review")
+    }
+
+    pool.query('INSERT INTO review (review_id, stars, user_name, date_created, summary) VALUES ($1, $2, $3, $4, $5) RETURNING*;', [review_id, stars, user_name, date_created, summary], (err, result) => {
+        if (err) {
+            res.status(410).send(err);
+        } else {
+            const reviewInfo = result.rows[0];
+            res.status(203).send(reviewInfo);
+        }
+    })
+})
+
+
+//DELETE ROUTES (x2) - NOT NECESSARY
+//PATCH ROUTES (x2) - NOT NECESSARY
 
 app.use(function(err, req, res, next){
-    console.log("Inside middleware error function");
-    res.status(404).send("ERROR 404 - THERE WAS A PROBLEM");
+    res.status(404).send("ERROR 404 ('MIDDLEWARE') - THERE WAS A PROBLEM", err);
 });
 
 
