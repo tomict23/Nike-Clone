@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeroThumbnails from "./HeroThumbnails";
 import Carousel from "./Carousel";
 
-const HeroContainer = () => {
+const HeroContainer = (props) => {
   // Temporary array of images for logic testing, will be replaced by API fetch calls
   const testArr = [
     "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ea3a034a-351d-4d5e-9e39-6ebe24eebd23/air-jordan-1-mid-mens-shoes-b3js2D.png",
