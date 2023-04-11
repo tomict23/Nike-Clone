@@ -1,12 +1,7 @@
 import '../styles/HeaderLine1.css';
-<<<<<<< HEAD
-import jordanLogo from '../styles/svgs/jordan.svg';
-import converseLogo from '../styles/svgs/converse.svg';
-=======
 import React, { useState } from 'react';
 import jordanLogo from '../jordan.svg';
 import converseLogo from '../converse.svg';
->>>>>>> 078f0289ae21f8a70bbc9fbee45cc53b2da1bef6
 
 const HeaderLine1 = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -39,49 +34,21 @@ const HeaderLine1 = () => {
   return (
     <div className='HeaderLine1Base'>
       <div className='HeaderLine1'>
-<<<<<<< HEAD
-        <div className='branditems'>
-          <div className='brand-item'>
-=======
         <div className="branditems">
           <div className='brand-item' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
->>>>>>> 078f0289ae21f8a70bbc9fbee45cc53b2da1bef6
             <img
               src={jordanLogo}
               alt='jordan-logo'
             />
           </div>
-<<<<<<< HEAD
-          <div className='brand-item'>
-            <img
-              src={converseLogo}
-              alt='converse-logo'
-            />
-          </div>
-=======
         <div className='brand-item' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
           <img
             src={converseLogo}
             alt='converse-logo'
           />
->>>>>>> 078f0289ae21f8a70bbc9fbee45cc53b2da1bef6
         </div>
+      </div>
         <div className='headermenu1'>
-<<<<<<< HEAD
-          <div className='menuoption'>
-            Find a Store
-            <div id='spacer'>|</div>
-          </div>
-          <div className='menuoption'>
-            Help
-            <div id='spacer'>|</div>
-          </div>
-          <div className='menuoption'>
-            Join Us
-            <div id='spacer'>|</div>
-          </div>
-          <div className='menuoption'>Sign In</div>
-=======
           <div className="menuoption">
           <div className='menuText' onMouseOver={hoveredOver} onMouseOut={hoveredOut}>
               Find a Store
@@ -152,7 +119,6 @@ const HeaderLine1 = () => {
             </div>
           </div>
 
->>>>>>> 078f0289ae21f8a70bbc9fbee45cc53b2da1bef6
         </div>
       </div>
     </div>
