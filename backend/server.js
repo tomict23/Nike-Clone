@@ -79,13 +79,14 @@ app.post('/api/shoes/', (req, res) => {
     const image_array = req.body.image_array;
     const description = req.body.description;
     const color_description = req.body.color_description;
+    const style = req.body.style;
     const size_array = req.body.size_array;
 
-    if (!name || !price || !image || !image_array || !description || !color_description || !size_array){
+    if (!name || !price || !image || !image_array || !description || !color_description || !style || !size_array){
         return res.status(407).send("Error in post data or insufficient data provided for post route shoes")
     }
 
-    pool.query('INSERT INTO shoes (name, price, image, image_array, thumbnail_image_array, description, color_description, size_array) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING*;', [name, price, image, image_array, thumbnail_image_array, description, color_description, size_array], (err, result) => {
+    pool.query('INSERT INTO shoes (name, price, image, image_array, thumbnail_image_array, description, color_description, style, size_array) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING*;', [name, price, image, image_array, description, color_description, style, size_array], (err, result) => {
         if (err) {
             res.status(409).send(err);
         } else {
