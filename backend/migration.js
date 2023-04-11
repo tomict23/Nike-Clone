@@ -27,6 +27,7 @@ function runMigrations(pool, callback){
                 image_array TEXT[] NOT NULL,
                 description VARCHAR (500) NOT NULL,
                 color_description VARCHAR (255) NOT NULL,
+                style VARCHAR (150) NOT NULL,
                 size_array VARCHAR[] NOT NULL)`, (err, data) => {
                     if (err) {
                         console.log("CREATE TABLE shoes FAILED", err)
