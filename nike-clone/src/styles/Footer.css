@@ -4,7 +4,7 @@
 }
 
 .Footer {
-  width: 89.5%;
+  /* width: 100vw; */
   height: 347px;
   background-color: rgb(17, 17, 17);
   color: white;
@@ -138,11 +138,7 @@
 }
 
 #footer-bottom-right {
-  /* border: 1px solid red; */
-  width: 33.5vw;
-  height: 50px;
   display: flex;
-  /* justify-content: space-between; */
   gap: 25px;
   flex-direction: column;
   margin-top: 45px;
@@ -151,8 +147,35 @@
 #f-bottom-right-top {
   display: flex;
   gap: 33.4px;
+  margin-left: auto;
 }
 
 #f-bottom-right-bottom {
   padding-left: 26.1vw;
+}
+
+.guide-menu {
+  position: absolute;
+  background-color: rgb(17, 17, 17);
+  /* right: 35vw; */
+
+  bottom: -480px;
+  /* height: 100px; */
+  flex-direction: row;
+  /* width: 100px; */
+  border: 2px solid white;
+  z-index: 50;
+  /* gap: 130px; */
+  right: 80px;
+  /* padding: 30px; */
+  width: 45%;
+}
+
+.guide-list {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  width: 100%;
 }
