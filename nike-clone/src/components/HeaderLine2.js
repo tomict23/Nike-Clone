@@ -552,38 +552,33 @@ const HeaderLine2 = () => {
             Kids
             <div onMouseOver={mouseOverMenu3} onMouseOut={mouseOutMenu3} className={`dropdownHeader2 ${showDropdown3 ? 'show' : ''}`}>
               <div>
-                  <div className='dropdownSection'>
-                    <div className='dropdownSectionHeader'>
-                    New Arrivals
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      Shop all
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      SNKRS Launch Calendar
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      New & Upcoming Drops
-                    </div>
-                  </div>
               <div className='dropdownSection'>
                 <div className='dropdownSectionHeader'>
                   Featured
                   </div>
                   <div className='dropdownSectionBody'>
-                    80's Inspired Collection
+                    New Arrivals
                   </div>
                   <div className='dropdownSectionBody'>
-                    Picks for Prom
+                    Best Sellers
                   </div>
                   <div className='dropdownSectionBody'>
-                    USWNT Jerseys
+                    Summer Brights
                   </div>
                   <div className='dropdownSectionBody'>
-                    New in Running
+                    New Styles for Play
                   </div>
                   <div className='dropdownSectionBody'>
-                    Member Exclusive
+                    New In Running
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Jordan
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Matching Sets
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Sale: Up to 40% Off
                   </div>
               </div>
                 
@@ -591,66 +586,129 @@ const HeaderLine2 = () => {
               <div className='dropdownSection'>
                 <div className='dropdownSection'>
                     <div className='dropdownSectionHeader'>
-                    Drops
+                    All Shoes
                     </div>
                     <div className='dropdownSectionBody'>
-                      AJ1
+                      Big Kids (3.5Y - 7Y)
                     </div>
                     <div className='dropdownSectionBody'>
-                      Dunks
+                      Little Kids (10.5C - 3Y)
                     </div>
                     <div className='dropdownSectionBody'>
-                      Get 'Em in SNKRS
+                      Baby & Toddler (1C - 10C)
                     </div>
                     <div className='dropdownSectionBody'>
-                      Jordan Heat Check
+                      Jordan
                     </div>
                     <div className='dropdownSectionBody'>
-                      Complete Your Look
+                      Air Force 
                     </div>
                     <div className='dropdownSectionBody'>
-                      Latest In Jordan Clothing
+                      Air Max
                     </div>
                     <div className='dropdownSectionBody'>
-                      Nike Lab
+                      Lifestyle
                     </div>
                     <div className='dropdownSectionBody'>
-                      Drops 101
+                      Basketball
+                    </div>
+                    <div className='dropdownSectionBody'>
+                      Running
+                    </div>
+                    <div className='dropdownSectionBody'>
+                      Shoes $70 & Under
+                    </div>
+                    <div className='dropdownSectionBody'>
+                      Easy On & Off
                     </div>
                 </div>
               </div>
               <div className='dropdownSection'>
                 <div className='dropdownSection'>
                   <div className='dropdownSectionHeader'>
-                    New For Men
+                    All Clothing
                   </div>
                   <div className='dropdownSectionBody'>
-                    Shoes
+                    Big Kids (XS -XL)
                   </div>
                   <div className='dropdownSectionBody'>
-                    Clothing
+                    Little Kids (4-7)
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Baby & Toddler (0M - 4T)
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Extended Sizing
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Tops & T-Shirts
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Bras
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Hoodies & Sweatshirts
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Outerwear & Jackets
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Pants & Tights
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Shorts
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Underwear
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Socks
+                  </div>
+                </div>
+                
+              </div>
+              <div className='dropdownSection'>
+              <div className='dropdownSection'>
+                  <div className='dropdownSectionHeader'>
+                  Shop by Age
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Big Kids
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Little Kids
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Baby & Toddler
                   </div>
                 </div>
                 <div className='dropdownSection'>
                   <div className='dropdownSectionHeader'>
-                  New For Women
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Shoes
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Clothing
-                  </div>
-                </div>
-                <div className='dropdownSection'>
-                  <div className='dropdownSectionHeader'>
-                  New For Kids
+                  Sport & Activity
                   </div>
                    <div className='dropdownSectionBody'>
-                    Shoes
+                    All Sport
                   </div>
                   <div className='dropdownSectionBody'>
-                    Clothing
+                    Play
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Basketball
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Soccer
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Baseball
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Softball
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Football
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Running
                   </div>
                 </div>
               </div>
@@ -660,106 +718,77 @@ const HeaderLine2 = () => {
             Accessories
             <div onMouseOver={mouseOverMenu4} onMouseOut={mouseOutMenu4} className={`dropdownHeader2 ${showDropdown4 ? 'show' : ''}`}>
               <div>
-                  <div className='dropdownSection'>
-                    <div className='dropdownSectionHeader'>
-                    New Arrivals
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      Shop all
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      SNKRS Launch Calendar
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      New & Upcoming Drops
-                    </div>
-                  </div>
               <div className='dropdownSection'>
                 <div className='dropdownSectionHeader'>
-                  Featured
+                  All Accessories
                   </div>
                   <div className='dropdownSectionBody'>
-                    80's Inspired Collection
+                    Jordan
                   </div>
                   <div className='dropdownSectionBody'>
-                    Picks for Prom
+                    Socks
                   </div>
                   <div className='dropdownSectionBody'>
-                    USWNT Jerseys
+                    Hats & Headwear
                   </div>
                   <div className='dropdownSectionBody'>
-                    New in Running
+                    Sunglasses & Eyewear
                   </div>
                   <div className='dropdownSectionBody'>
-                    Member Exclusive
+                    Bags & Backbacks
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Water Bottles & Hydration
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Gloves
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    $25 & Under
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Sale: Up to 40% Off
                   </div>
               </div>
-                
               </div>
               <div className='dropdownSection'>
                 <div className='dropdownSection'>
                     <div className='dropdownSectionHeader'>
-                    Drops
+                    Gear Up by Sport
                     </div>
                     <div className='dropdownSectionBody'>
-                      AJ1
+                      All Sport
                     </div>
                     <div className='dropdownSectionBody'>
-                      Dunks
+                      Basketball
                     </div>
                     <div className='dropdownSectionBody'>
-                      Get 'Em in SNKRS
+                      Golf
                     </div>
                     <div className='dropdownSectionBody'>
-                      Jordan Heat Check
+                      Soccer
                     </div>
                     <div className='dropdownSectionBody'>
-                      Complete Your Look
+                      Football
                     </div>
                     <div className='dropdownSectionBody'>
-                      Latest In Jordan Clothing
+                      Baseball
                     </div>
                     <div className='dropdownSectionBody'>
-                      Nike Lab
+                      Track & Field
                     </div>
                     <div className='dropdownSectionBody'>
-                      Drops 101
+                      Lacrosse
                     </div>
-                </div>
-              </div>
-              <div className='dropdownSection'>
-                <div className='dropdownSection'>
-                  <div className='dropdownSectionHeader'>
-                    New For Men
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Shoes
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Clothing
-                  </div>
-                </div>
-                <div className='dropdownSection'>
-                  <div className='dropdownSectionHeader'>
-                  New For Women
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Shoes
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Clothing
-                  </div>
-                </div>
-                <div className='dropdownSection'>
-                  <div className='dropdownSectionHeader'>
-                  New For Kids
-                  </div>
-                   <div className='dropdownSectionBody'>
-                    Shoes
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Clothing
-                  </div>
+                    <div className='dropdownSectionBody'>
+                      Softball
+                    </div>
+                    <div className='dropdownSectionBody'>
+                      Running
+                    </div>
+                    <div className='dropdownSectionBody'>
+                      Swim
+                    </div>
                 </div>
               </div>
             </div>
@@ -770,86 +799,72 @@ const HeaderLine2 = () => {
               <div>
                   <div className='dropdownSection'>
                     <div className='dropdownSectionHeader'>
-                    New Arrivals
+                    All Sale
                     </div>
                     <div className='dropdownSectionBody'>
-                      Shop all
+                      Sale Shoes
                     </div>
                     <div className='dropdownSectionBody'>
-                      SNKRS Launch Calendar
+                      Sale Clothing
                     </div>
                     <div className='dropdownSectionBody'>
-                      New & Upcoming Drops
+                      Sale Acessories
                     </div>
                   </div>
               <div className='dropdownSection'>
                 <div className='dropdownSectionHeader'>
-                  Featured
+                  Limited Time
                   </div>
                   <div className='dropdownSectionBody'>
-                    80's Inspired Collection
+                    Last Chance Sale
                   </div>
                   <div className='dropdownSectionBody'>
-                    Picks for Prom
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    USWNT Jerseys
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    New in Running
-                  </div>
-                  <div className='dropdownSectionBody'>
-                    Member Exclusive
+                    New Markdowns
                   </div>
               </div>
-                
               </div>
               <div className='dropdownSection'>
                 <div className='dropdownSection'>
                     <div className='dropdownSectionHeader'>
-                    Drops
+                    Men
                     </div>
                     <div className='dropdownSectionBody'>
-                      AJ1
+                      Shoes
                     </div>
                     <div className='dropdownSectionBody'>
-                      Dunks
+                      Clothing
                     </div>
                     <div className='dropdownSectionBody'>
-                      Get 'Em in SNKRS
+                      Accessories
                     </div>
                     <div className='dropdownSectionBody'>
-                      Jordan Heat Check
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      Complete Your Look
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      Latest In Jordan Clothing
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      Nike Lab
-                    </div>
-                    <div className='dropdownSectionBody'>
-                      Drops 101
+                      Shop All
                     </div>
                 </div>
               </div>
               <div className='dropdownSection'>
                 <div className='dropdownSection'>
                   <div className='dropdownSectionHeader'>
-                    New For Men
+                    Women
                   </div>
                   <div className='dropdownSectionBody'>
                     Shoes
                   </div>
                   <div className='dropdownSectionBody'>
                     Clothing
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Accessories
+                  </div>
+                  <div className='dropdownSectionBody'>
+                    Shop All
                   </div>
                 </div>
+              </div>
+              <div className='dropdownSection'>
                 <div className='dropdownSection'>
                   <div className='dropdownSectionHeader'>
-                  New For Women
+                    Kids
                   </div>
                   <div className='dropdownSectionBody'>
                     Shoes
@@ -857,16 +872,11 @@ const HeaderLine2 = () => {
                   <div className='dropdownSectionBody'>
                     Clothing
                   </div>
-                </div>
-                <div className='dropdownSection'>
-                  <div className='dropdownSectionHeader'>
-                  New For Kids
-                  </div>
-                   <div className='dropdownSectionBody'>
-                    Shoes
+                  <div className='dropdownSectionBody'>
+                    Accessories
                   </div>
                   <div className='dropdownSectionBody'>
-                    Clothing
+                    Shop All
                   </div>
                 </div>
               </div>
