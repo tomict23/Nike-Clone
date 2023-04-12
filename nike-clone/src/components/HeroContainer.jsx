@@ -18,20 +18,21 @@ const HeroContainer = (props) => {
   // State management for carousel buttons to cycle through array of images
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // State management for which image is set to focus image
-  const [focusImage, setFocusedImage] = useState();
-
   // Default images to load on initial render
   useEffect(() => {
     fetch("http://localhost:8000/api/shoes/1")
       .then((res) => res.json())
-      .then((data) => setFocusedImage(data[0].image));
+      .then((data) => {
+        props.setFocusedImage(data[0].image);
+        props.setThumbnailImages(data[0].image_array);
+    })
+      .catch((error) => console.error(error))
   }, []);
 
   // Carousel button controls
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % testArr.length);
-    setFocusedImage(testArr[currentIndex]);
+    props.setFocusedImage(testArr[currentIndex]);
     console.log(currentIndex);
   };
 
@@ -41,22 +42,28 @@ const HeroContainer = (props) => {
       index = testArr.length - 1;
     }
     setCurrentIndex(index);
-    setFocusedImage(testArr[index]);
+    props.setFocusedImage(testArr[index]);
     console.log(currentIndex);
   };
 
   // Sets focused image when mouse enters a thumbnail image
   const handleEnter = (image) => {
-    setFocusedImage(image);
+    props.setFocusedImage(image);
   };
 
   // Rendering
   return (
     <div className="hero-container">
-      <HeroThumbnails handleEnter={handleEnter} testArr={testArr} />
+      <HeroThumbnails
+        handleEnter={handleEnter}
+        thumbnailImages={props.thumbnailImages}
+      />
       <div className="hero-image-container">
-        <img id="hero-img" src={focusImage} alt="" />
-        <Carousel prevImage={prevImage} nextImage={nextImage} />
+        <img id="hero-img" src={props.focusImage} alt="" />
+        <Carousel
+          prevImage={prevImage}
+          nextImage={nextImage}
+        />
       </div>
     </div>
   );
