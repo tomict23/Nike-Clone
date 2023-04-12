@@ -1,6 +1,6 @@
 import React, { useState , useEffect } from 'react';
 import "../styles/Reviews.css";
-const Reviews = () => {
+const Reviews = (props) => {
     const [active, setActive] = useState(false);
     const [data, setData] = useState();
     function click() {
@@ -11,7 +11,7 @@ const Reviews = () => {
         } 
     }
     useEffect(() => {
-        fetch("http://localhost:8000/api/review")
+        fetch("http://localhost:8000/api/review/" + props.id)
         .then(response => response.json())
         .then((data) => setData(data))
         .catch(error => console.error(error));

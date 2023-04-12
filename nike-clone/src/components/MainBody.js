@@ -4,7 +4,6 @@ import "../styles/App.css";
 import "../styles/MainBody.css";
 import HeroContainer from "./HeroContainer";
 import RightBodyContainer from "./RightBodyContainer";
-import SuggestedContent from './SuggestedContent';
 
 const MainBody = () => {
   const [id, setId] = useState(1);
@@ -40,7 +39,6 @@ const MainBody = () => {
           />
         </div>
       </div>
-      <SuggestedContent />
     </div>
   );
 };
