@@ -32,11 +32,17 @@ const HeroContainer = (props) => {
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % testArr.length);
     setFocusedImage(testArr[currentIndex]);
+    console.log(currentIndex);
   };
 
   const prevImage = () => {
-    setCurrentIndex((currentIndex - 1) % testArr.length);
-    setFocusedImage(testArr[currentIndex]);
+    let index = (currentIndex - 1) % testArr.length;
+    if (index < 0) {
+      index = testArr.length - 1;
+    }
+    setCurrentIndex(index);
+    setFocusedImage(testArr[index]);
+    console.log(currentIndex);
   };
 
   // Sets focused image when mouse enters a thumbnail image
