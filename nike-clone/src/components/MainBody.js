@@ -41,7 +41,7 @@ const MainBody = () => {
         </div>
       </div>
       <SuggestedContent />
-    </>
+    </div>
   );
 };
 
