@@ -98,16 +98,17 @@ app.post('/api/shoes/', (req, res) => {
 
 app.post('/api/review/', (req, res) => {
     const review_id = req.body.review_id;
+    const title = req.body.title;
     const stars = req.body.stars;
     const user_name = req.body.user_name;
     const date_created = req.body.date_created;
     const summary = req.body.summary;
 
-    if (!review_id || !stars || !user_name || !date_created || !summary){
+    if (!review_id || !title || !stars || !user_name || !date_created || !summary){
         return res.status(408).send("Error in post data or insufficient data provided for post route review")
     }
 
-    pool.query('INSERT INTO review (review_id, stars, user_name, date_created, summary) VALUES ($1, $2, $3, $4, $5) RETURNING*;', [review_id, stars, user_name, date_created, summary], (err, result) => {
+    pool.query('INSERT INTO review (review_id, title, stars, user_name, date_created, summary) VALUES ($1, $2, $3, $4, $5, $6) RETURNING*;', [review_id, title, stars, user_name, date_created, summary], (err, result) => {
         if (err) {
             res.status(410).send(err);
         } else {
