@@ -1,5 +1,5 @@
 FROM node:18.7.0
-WORKDIR /FEC
+WORKDIR /Nike-Clone
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
