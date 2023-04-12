@@ -37,6 +37,7 @@ function runMigrations(pool, callback){
                         pool.query(`CREATE TABLE review (
                             id SERIAL PRIMARY KEY,
                             review_id INT NOT NULL,
+                            title VARCHAR (255),
                             stars INT NOT NULL,
                             user_name VARCHAR (255) NOT NULL,
                             date_created VARCHAR (30) NOT NULL,
