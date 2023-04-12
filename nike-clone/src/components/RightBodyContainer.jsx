@@ -15,12 +15,18 @@ const RightBodyContainer = (props) => {
             {memberAccess && <Members />}
             <h2>Air Jordan 1 Mid</h2>
             <h3>Men's Shoes</h3>
-            <Price setPrice={setPrice}/>
+            <Price 
+                setPrice={setPrice}
+            />
             <ShoeButtonGroup 
                 setPrice={setPrice} 
                 id={props.id} 
                 setId={props.setId} 
                 setMemberAccess={setMemberAccess}
+                focusImage = {props.focusImage}
+                setFocusedImage ={props.setFocusedImage}
+                thumbnailImages={props.thumbnailImages}
+                setThumbnailImages={props.setThumbnailImages}
             />
             <FreeSR/>
             <Reviews/>
