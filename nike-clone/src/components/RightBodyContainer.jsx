@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Members from './members';
 import Price from './Price';
 import ShoeButtonGroup from "./ShoeButtonGroup";
+import FreeSR from "./FreeSR"
+import Reviews from './Reviews';
 
 const RightBodyContainer = (props) => {
 
@@ -20,6 +22,8 @@ const RightBodyContainer = (props) => {
                 setId={props.setId} 
                 setMemberAccess={setMemberAccess}
             />
+            <FreeSR/>
+            <Reviews/>
         </div>
     )    
 }
