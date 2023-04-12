@@ -22,13 +22,13 @@ function runMigrations(pool, callback){
             pool.query(`CREATE TABLE IF NOT EXISTS shoes (
                 id SERIAL PRIMARY KEY,
                 name VARCHAR (255) NOT NULL,
-                price VARCHAR (12) NOT NULL,
+                price VARCHAR (25) NOT NULL,
                 image VARCHAR (500) NOT NULL,
                 image_array TEXT[] NOT NULL,
                 description VARCHAR (500) NOT NULL,
                 color_description VARCHAR (255) NOT NULL,
-                style VARCHAR (150) NOT NULL,
-                size_array VARCHAR[] NOT NULL)`, (err, data) => {
+                style VARCHAR (500) NOT NULL,
+                size_array TEXT[] NOT NULL)`, (err, data) => {
                     if (err) {
                         console.log("CREATE TABLE shoes FAILED", err)
                     } else {
