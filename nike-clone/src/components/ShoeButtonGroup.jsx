@@ -30,9 +30,9 @@ const ShoeButtonGroup = (props) => {
                 props.setThumbnailImages(data[0].image_array);
                 props.setPrice(data[0].price);
                 props.setSizeArray(data[0].size_array)
+                props.setInterest("INSERT HERE")
             })
             .catch((error) => console.error(error))
-            console.table(props.sizeArray)
     };
 
     return (
