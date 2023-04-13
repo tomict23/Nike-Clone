@@ -31,8 +31,18 @@ app.get('/api/shoes', (req, res, next) => {
 
 app.get('/api/shoes/:id', (req, res, next) =>{
     const id = Number.parseInt(req.params.id);
-
     pool.query('SELECT * FROM shoes WHERE id=$1', [id], (err, result) => {
+        if (err){
+            res.status(404).send(err);
+        } else {
+            const shoe = result.rows;
+            res.status(200).send(shoe);
+        }
+    })
+})
+app.get('/api/shoeid/:id', (req, res, next) =>{
+    const id = Number.parseInt(req.params.id);
+    pool.query('SELECT * FROM shoes WHERE shoeid=$1', [id], (err, result) => {
         if (err){
             res.status(404).send(err);
         } else {

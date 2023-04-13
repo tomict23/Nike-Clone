@@ -27,6 +27,7 @@ const RightBodyContainer = (props) => {
                 setFocusedImage ={props.setFocusedImage}
                 thumbnailImages={props.thumbnailImages}
                 setThumbnailImages={props.setThumbnailImages}
+                shoeid = {props.shoeid}
             />
             <FreeSR/>
             <Reviews
