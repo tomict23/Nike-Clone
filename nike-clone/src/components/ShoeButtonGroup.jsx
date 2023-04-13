@@ -4,12 +4,11 @@ const ShoeButtonGroup = (props) => {
 
     const [picArray, setPicArray] = useState([]);
 
-
     useEffect(() => {
+
         const fetchData = async () => {
             const response = await
-
-                fetch('http://localhost:8000/api/shoes');
+            fetch('http://localhost:8000/api/shoeid/' + props.shoeid);
             const data = await response.json();
             setPicArray(data.map(shoe => shoe.image))
         };
@@ -19,15 +18,21 @@ const ShoeButtonGroup = (props) => {
     const handleImageClick = (index) => {
         const id = index + 1;
         props.setId(id);
-        console.log(id);
+        if (id === 1){
+            props.setMemberAccess(true);
+        }else {
+            props.setMemberAccess(false);
+        }
         fetch(`http://localhost:8000/api/shoes/${id}`)
             .then(res => res.json())
             .then((data) => {
                 props.setFocusedImage(data[0].image);
                 props.setThumbnailImages(data[0].image_array);
+                props.setPrice(data[0].price);
+                props.setSizeArray(data[0].size_array)
+                props.setInterest("INSERT HERE")
             })
             .catch((error) => console.error(error))
-            console.table(props.thumbnailImages)
     };
 
     return (
