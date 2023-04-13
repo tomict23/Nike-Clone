@@ -26,6 +26,8 @@ const HeroContainer = (props) => {
       .then((data) => {
         props.setFocusedImage(data[0].image);
         props.setThumbnailImages(data[0].image_array);
+        props.setSizeArray(data[0].size_array);
+        props.setPrice(data[0].price);
     })
       .catch((error) => console.error(error))
   }, []);

@@ -5,11 +5,11 @@ import ShoeButtonGroup from "./ShoeButtonGroup";
 import FreeSR from "./FreeSR"
 import Reviews from './Reviews';
 import InformationBlock from "./InformationBlock";
+import SizeGuide from "./SizeGuide";
 
 const RightBodyContainer = (props) => {
 
     const [memberAccess, setMemberAccess] = useState(true);
-    const [price, setPrice] = useState("");
   
     return (
         <div>
@@ -17,10 +17,11 @@ const RightBodyContainer = (props) => {
             <h2>Air Jordan 1 Mid</h2>
             <h3>Men's Shoes</h3>
             <Price 
-                setPrice={setPrice}
+                setPrice={props.setPrice}
+                price = {props.price}
             />
             <ShoeButtonGroup 
-                setPrice={setPrice} 
+                setPrice={props.setPrice} 
                 id={props.id} 
                 setId={props.setId} 
                 setMemberAccess={setMemberAccess}
@@ -29,6 +30,11 @@ const RightBodyContainer = (props) => {
                 thumbnailImages={props.thumbnailImages}
                 setThumbnailImages={props.setThumbnailImages}
                 shoeid = {props.shoeid}
+                sizeArray = {props.sizeArray}
+                setSizeArray={props.setSizeArray}
+            />
+            <SizeGuide 
+                sizeArray = {props.sizeArray}
             />
             <InformationBlock/>
             <FreeSR/>

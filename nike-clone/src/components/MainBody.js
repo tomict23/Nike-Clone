@@ -22,6 +22,12 @@ const MainBody = () => {
   //State management for thumbnail images:
   const [thumbnailImages, setThumbnailImages] = useState([]);
 
+  //State management for shoe sizes array:
+  const [sizeArray, setSizeArray] = useState([]);
+
+  //State management for shoe price:
+  const [price, setPrice] = useState("");
+
   return (
 
     <div className="main-body-container">
@@ -34,6 +40,10 @@ const MainBody = () => {
             thumbnailImages={thumbnailImages}
             setThumbnailImages={setThumbnailImages}
             data= {data}
+            setSizeArray={setSizeArray}
+            sizeArray={sizeArray}
+            setPrice={setPrice}
+            price={price}
           />
         </div>
 
@@ -47,6 +57,10 @@ const MainBody = () => {
             setThumbnailImages={setThumbnailImages}  
             shoeid = {shoeid}
             data = {data}
+            sizeArray={sizeArray}
+            setSizeArray={setSizeArray}
+            price={price}
+            setPrice={setPrice}
           />
         </div>
       </div>
