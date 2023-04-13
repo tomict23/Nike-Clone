@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/SuggestedContent.css';
+import suggestionPrev from '../styles/svgs/suggestionPrev.svg';
+import suggestionNext from '../styles/svgs/suggestionNext.svg';
 
 const suggestedItems = [
   {
@@ -89,13 +91,66 @@ const suggestedItems = [
 ];
 
 const SuggestedContent = () => {
+  const ref = useRef();
+  const prevButton = useRef();
+  const nextButton = useRef();
+  const [index, setIndex] = useState(1);
+  const scroll = (scrollOffset) => {
+    if (scrollOffset === 400) {
+      setIndex((index += 1));
+      ref.current.scrollLeft += scrollOffset;
+    } else {
+      setIndex((index -= 1));
+      ref.current.scrollLeft += scrollOffset;
+    }
+    if (index === 0 || index === 1) {
+      setIndex(1);
+      prevButton.current.style.opacity = '0.25';
+    }
+    if (index >= 2 || index <= 9) {
+      prevButton.current.style.opacity = '1';
+      nextButton.current.style.opacity = '1';
+    }
+    if (index === 11 || index === 10) {
+      setIndex(10);
+      nextButton.current.style.opacity = '0.25';
+    }
+
+    console.log(index);
+  };
+
   return (
     <div className='suggested-content'>
       <div id='slides-menu'>
         <div className='slider-title'>You Might Also Like</div>
-        <div>prev next icons</div>
+        <div className='slide-controls'>
+          <div
+            ref={prevButton}
+            className='scroll-button'
+            style={{ opacity: '0.25' }}
+            onClick={() => scroll(-400)}
+          >
+            <img
+              src={suggestionPrev}
+              alt='prev'
+            />
+          </div>
+          <div
+            ref={nextButton}
+            className='scroll-button'
+            onClick={() => scroll(400)}
+          >
+            <img
+              src={suggestionNext}
+              alt='next'
+            />
+          </div>
+        </div>
       </div>
-      <div id='card-slider'>
+      <div
+        id='card-slider'
+        ref={ref}
+      >
         {suggestedItems.map((item) => {
           return (
             <div className='suggested-card'>
