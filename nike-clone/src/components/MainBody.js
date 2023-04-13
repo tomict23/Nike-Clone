@@ -1,9 +1,9 @@
 import { useState } from 'react';
+
 import "../styles/App.css";
 import "../styles/MainBody.css";
 import HeroContainer from "./HeroContainer";
 import RightBodyContainer from "./RightBodyContainer";
-import SuggestedContent from './SuggestedContent';
 
 const MainBody = () => {
   const [id, setId] = useState(1);
@@ -15,6 +15,7 @@ const MainBody = () => {
   const [thumbnailImages, setThumbnailImages] = useState([]);
 
   return (
+
     <div className="main-body-container">
       <div className="main-body">
         <div className="main-body-left">
@@ -37,7 +38,6 @@ const MainBody = () => {
             setThumbnailImages={setThumbnailImages}  
           />
         </div>
-          <SuggestedContent/>
       </div>
     </div>
   );

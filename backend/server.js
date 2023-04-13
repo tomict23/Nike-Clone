@@ -57,7 +57,7 @@ app.get('/api/review', (req, res, next) => {
 app.get('/api/review/:id', (req, res, next) => {
     const id = Number.parseInt(req.params.id);
 
-    pool.query('SELECT * FROM review WHERE id=$1', [id], (err, result) => {
+    pool.query('SELECT * FROM review WHERE review_id=$1', [id], (err, result) => {
         if (err){
             res.status(404).send(err)
         } else {

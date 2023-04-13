@@ -52,11 +52,13 @@
   }
   .slide-text2.hide {
     pointer-events: none;
+    height: 60px;
   }
   .slide-text2.show {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
+    height: 60px;
   }
   .slide-text3 {
     display: flex;

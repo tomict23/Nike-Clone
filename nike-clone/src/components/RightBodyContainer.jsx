@@ -29,7 +29,8 @@ const RightBodyContainer = (props) => {
                 setThumbnailImages={props.setThumbnailImages}
             />
             <FreeSR/>
-            <Reviews/>
+            <Reviews
+                id={props.id}/>
         </div>
     )    
 }
