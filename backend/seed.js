@@ -29,7 +29,10 @@ function runSeeder(pool, callback) {
             ('Air Jordan 1 Retro High OG', '7', '$180.00', 'Women''s Shoes', 'https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/dce802d5-316c-4188-ac85-27407a749f09/air-jordan-1-retro-high-og-womens-shoes-LcJVSj.png', NULL, NULL, NULL, NULL, NULL),
             ('Air Jordan 1 Hi FlyEase', '8', '$150.00', 'Men''s Shoes', 'https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/43236b1a-5f64-49cf-85a0-962d58f6b353/air-jordan-1-hi-flyease-mens-shoes-VjGcGX.png', NULL, NULL, NULL, NULL, NULL),
             ('Air Jordan 13 Retro', '9', '$210.00', 'Shoe', 'https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/fadf1b0c-c687-4e3d-8f4e-6d089d115a0c/air-jordan-13-retro-shoe-08RC9v.png', NULL, NULL, NULL, NULL, NULL),
-            ('Jordan 6 Rings', '10', '$144.97', 'Men''s Shoes', 'https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/719321f3-9576-4e9e-a773-3e7e490c0bce/jordan-6-rings-mens-shoes-2VAD3Y.png', NULL, NULL, NULL, NULL, NULL)`,
+            ('Jordan 6 Rings', '10', '$144.97', 'Men''s Shoes', 'https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/719321f3-9576-4e9e-a773-3e7e490c0bce/jordan-6-rings-mens-shoes-2VAD3Y.png', NULL, NULL, NULL, NULL, NULL),
+            ('Jordan Access','11','$110.00','Men''s Shoe','https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/1da9a11f-cc52-4b7a-ae05-29bb2a11318d/jordan-access-mens-shoe-5Jm9bC.png', NULL, NULL, NULL, NULL, NULL),
+            ('Nike Air Force 1 ''07','12','$110.00','Men''s Shoe','https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/4f37fca8-6bce-43e7-ad07-f57ae3c13142/air-force-1-07-mens-shoes-5QFp5Z.png', NULL, NULL, NULL, NULL, NULL),
+            ('Air Jordan 1 Low G','13','$140.00','Golf Shoes','https://static.nike.com/a/images/t_PDP_864_v1,f_auto,q_auto:eco/4203faa2-8da6-4416-a479-89d2c1f259f6/air-jordan-1-low-g-golf-shoes-jChrQ3.png', NULL, NULL, NULL, NULL, NULL)`,
             (err) => {
                 if (err) {
                     console.log("INSERT DATA FAILED ON shoes TABLE", err)
