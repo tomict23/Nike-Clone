@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../styles/InformationBlock.css"
 
 
 const InformationBlock = (props) => {
@@ -20,7 +21,7 @@ const InformationBlock = (props) => {
                     </div>
                     <div className='IB2'>
                         <p className='IB2Line1'>
-                            Free Pick Up
+                            Free Pickup
                         </p>
                         <p className='IB2Line2'>
                             Find a Store
@@ -35,11 +36,16 @@ const InformationBlock = (props) => {
                         </p>
                     </div>
                     <div className='IB4'>
-                        <p className='IB4Line1'>
+                        <li className='IB4Line1'>
                          {props.currentShoe[0].color_description}
-                        </p>
-                        <p className='IB4Line2'>
+                        </li>
+                        <li className='IB4Line2'>
                          {props.currentShoe[0].style}
+                        </li>
+                    </div>
+                    <div className='IB5'>
+                        <p className='IB5Line1'>
+                         View Product Details
                         </p>
                     </div>
                 </div>
