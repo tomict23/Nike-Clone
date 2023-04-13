@@ -5,6 +5,7 @@ import ShoeButtonGroup from "./ShoeButtonGroup";
 import FreeSR from "./FreeSR"
 import Reviews from './Reviews';
 import SizeGuide from "./SizeGuide";
+import Interest from "./Interest";
 
 const RightBodyContainer = (props) => {
 
@@ -29,11 +30,14 @@ const RightBodyContainer = (props) => {
                 thumbnailImages={props.thumbnailImages}
                 setThumbnailImages={props.setThumbnailImages}
                 shoeid = {props.shoeid}
-                sizeArray = {props.sizeArray}
                 setSizeArray={props.setSizeArray}
+                setInterest={props.setInterest}
             />
             <SizeGuide 
                 sizeArray = {props.sizeArray}
+            />
+            <Interest 
+                interest={props.interest}
             />
             <FreeSR/>
             <Reviews

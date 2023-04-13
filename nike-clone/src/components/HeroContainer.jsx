@@ -28,6 +28,7 @@ const HeroContainer = (props) => {
         props.setThumbnailImages(data[0].image_array);
         props.setSizeArray(data[0].size_array);
         props.setPrice(data[0].price);
+        props.setInterest('$31.25');
     })
       .catch((error) => console.error(error))
   }, []);
