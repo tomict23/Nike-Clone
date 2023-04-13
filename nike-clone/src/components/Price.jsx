@@ -4,6 +4,7 @@ const Price = (props) => {
 
     return (
         <>
+            <span className='price'>{props.price}</span>
         </>
     )
 }
