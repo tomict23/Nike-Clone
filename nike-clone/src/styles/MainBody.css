@@ -112,3 +112,40 @@
     padding: 6px 6px 6px 6px;
     cursor: pointer;
 }
+
+.size-guide-text {
+    float: right;
+}
+
+.select-size-text {
+    float: left;
+}
+
+
+.shoe-size-boxes-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1, 1fr);
+    grid-gap: 7px;
+}
+
+.shoe-size-boxes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.shoe-size-select {
+    width: 180px; 
+    height: 50px; 
+    background-color: white; 
+    /* opacity: 20%;
+    background-color:gray; */
+    text-align: center; 
+    border-width: 1px;
+    border-color: grey;
+    margin-top: 5px;
+    margin-right: 5px;
+    
+
+}
