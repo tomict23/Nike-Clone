@@ -21,6 +21,8 @@ const RightBodyContainer = (props) => {
                 price = {props.price}
             />
             <ShoeButtonGroup 
+                setCurrentShoe={props.setCurrentShoe}
+                currentShoe={props.currentShoe}
                 setPrice={props.setPrice} 
                 id={props.id} 
                 setId={props.setId} 
@@ -36,7 +38,9 @@ const RightBodyContainer = (props) => {
             <SizeGuide 
                 sizeArray = {props.sizeArray}
             />
-            <InformationBlock/>
+            <InformationBlock
+                currentShoe = {props.currentShoe}
+            />
             <FreeSR/>
             <Reviews
                 id={props.id}
