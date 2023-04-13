@@ -4,6 +4,7 @@ import Price from './Price';
 import ShoeButtonGroup from "./ShoeButtonGroup";
 import FreeSR from "./FreeSR"
 import Reviews from './Reviews';
+import InformationBlock from "./InformationBlock";
 import SizeGuide from "./SizeGuide";
 import Interest from "./Interest";
 
@@ -39,9 +40,12 @@ const RightBodyContainer = (props) => {
             <Interest 
                 interest={props.interest}
             />
+            <InformationBlock/>
             <FreeSR/>
             <Reviews
-                id={props.id}/>
+                id={props.id}
+                data={props.data}/>
+                
         </div>
     )    
 }

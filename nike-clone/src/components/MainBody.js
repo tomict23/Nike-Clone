@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
 import "../styles/App.css";
 import "../styles/MainBody.css";
@@ -8,6 +8,14 @@ import RightBodyContainer from "./RightBodyContainer";
 const MainBody = () => {
   const [id, setId] = useState(1);
   const [shoeid, setShoeId] = useState(1);
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/review/" + id)
+    .then(response => response.json())
+    .then((data) => setData(data))
+    .catch(error => console.error(error));
+}, []);
   // State management for which image is set to focus image
   const [focusImage, setFocusedImage] = useState();
 
@@ -34,6 +42,7 @@ const MainBody = () => {
             setFocusedImage ={setFocusedImage}
             thumbnailImages={thumbnailImages}
             setThumbnailImages={setThumbnailImages}
+            data= {data}
             setSizeArray={setSizeArray}
             setPrice={setPrice}
             setInterest={setInterest}
@@ -49,6 +58,7 @@ const MainBody = () => {
             thumbnailImages={thumbnailImages}
             setThumbnailImages={setThumbnailImages}  
             shoeid = {shoeid}
+            data = {data}
             sizeArray={sizeArray}
             setSizeArray={setSizeArray}
             price={price}
