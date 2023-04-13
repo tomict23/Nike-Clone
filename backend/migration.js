@@ -23,12 +23,13 @@ function runMigrations(pool, callback){
                 id SERIAL PRIMARY KEY,
                 name VARCHAR (255) NOT NULL,
                 price VARCHAR (26) NOT NULL,
+                gender TEXT,
                 image VARCHAR (500) NOT NULL,
-                image_array TEXT[] NOT NULL,
-                description VARCHAR (500) NOT NULL,
-                color_description VARCHAR (255) NOT NULL,
-                style VARCHAR (150) NOT NULL,
-                size_array TEXT[] NOT NULL)`, (err, data) => {
+                image_array TEXT[],
+                description VARCHAR (500),
+                color_description VARCHAR (255),
+                style VARCHAR (150),
+                size_array TEXT[])`, (err, data) => {
                     if (err) {
                         console.log("CREATE TABLE shoes FAILED", err)
                     } else {
