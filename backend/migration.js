@@ -14,7 +14,7 @@ function runMigrations(pool, callback){
             return done();
         }
         //RUN migration SQL:
-        pool.query('DROP TABLE IF EXISTS reviews; DROP TABLE IF EXISTS shoes ', (err) =>{
+        pool.query('DROP TABLE IF EXISTS review; DROP TABLE IF EXISTS shoes ', (err) =>{
             if (err){
                 console.log(err);
             }
@@ -23,7 +23,7 @@ function runMigrations(pool, callback){
                 id SERIAL PRIMARY KEY,
                 name VARCHAR (255) NOT NULL,
                 price VARCHAR (26) NOT NULL,
-                gender TEXT,
+                gender VARCHAR (75),
                 image VARCHAR (500) NOT NULL,
                 image_array TEXT[],
                 description VARCHAR (500),
