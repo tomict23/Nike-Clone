@@ -9,7 +9,7 @@ const ShoeButtonGroup = (props) => {
         const fetchData = async () => {
             const response = await
 
-                fetch('http://localhost:8000/api/shoes');
+            fetch('http://localhost:8000/api/shoes');
             const data = await response.json();
             setPicArray(data.map(shoe => shoe.image))
         };
