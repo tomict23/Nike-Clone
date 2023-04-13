@@ -1,4 +1,4 @@
-Nike Website Clone
+Nike Website Clone (IN-PROCESS)
 This is a clone of the Nike website, built with React for the front-end, Express for the backend, and Docker for the database. The purpose of this project is to demonstrate the use of these technologies and how they can work together to create a functional web application.
 
 Technologies Used
