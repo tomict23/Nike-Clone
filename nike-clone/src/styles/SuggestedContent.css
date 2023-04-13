@@ -4,6 +4,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
   overflow-x: hidden;
+  margin: 0 9.7vw;
 }
 .suggested-content > div {
   /* border: 1px solid red; */
@@ -13,30 +14,31 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  padding-left: 48px;
-  padding-right: 48px;
+  /* padding-left: 48px;
+  padding-right: 48px; */
   /* border: 1px solid rgb(255, 136, 0); */
 }
 
 #card-slider {
-  /* height: 467px; */
+  --height: 740px;
   /* z-index: 5; */
   display: flex;
   flex-direction: row;
   gap: 12px;
   /* border: 1px solid rgb(0, 110, 255); */
   overflow-y: hidden;
+  overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding-left: 48px;
+  /* padding-left: 48px; */
 
   /* scroll-snap-align: 50px; */
 }
 
 .suggested-card {
   /* border: 1px solid red; */
-  /* width: 467.5px; */
-  /* height: 100%; */
+  /* width: var(--height);
+  height: var(--height); */
   display: flex;
   flex-direction: column;
   /* gap: 5px; */
@@ -45,8 +47,8 @@
 
 #suggested-card-image {
   display: block;
-  height: 467.5px;
-  width: 467.5px;
+  height: 26.04vw;
+  width: 26.04vw;
   /* width: 334.18px; */
   object-fit: cover;
   margin-bottom: 10px;
