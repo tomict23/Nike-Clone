@@ -1,3 +1,25 @@
-.FreeSR {
-    margin-top: 4%;
+.freeSRMain {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: inherit;
+    height: 80px;
+    background-color: #ffffff;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: black;
+}
+
+.dropdown {
+    margin-top: -20px;
+}
+.linkOneLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
 }

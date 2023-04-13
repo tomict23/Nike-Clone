@@ -61,7 +61,7 @@ const Reviews = (props) => {
                     </div>
                     <div className="reviewSingle">
                         <p className='reviewTitle'>
-                            I love these
+                        {data[0].title}
                         </p>
                         <div className='reviewLine1'>
                             <div className="stars2">
@@ -82,7 +82,7 @@ const Reviews = (props) => {
                     </div>
                     <div className="reviewSingle">
                         <p className='reviewTitle'>
-                           They are dope 
+                           {data[1].title}
                         </p>
                         <div className='reviewLine1'>
                             <div className="stars2">
@@ -102,7 +102,7 @@ const Reviews = (props) => {
                     </div>
                     <div className="reviewSingle">
                         <p className='reviewTitle'>
-                            Great shoe
+                        {data[2].title}
                         </p>
                         <div className='reviewLine1'>
                             <div className="stars2">
