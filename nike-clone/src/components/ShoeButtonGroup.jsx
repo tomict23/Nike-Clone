@@ -4,13 +4,13 @@ const ShoeButtonGroup = (props) => {
 
     const [picArray, setPicArray] = useState([]);
 
-
     useEffect(() => {
+
         const fetchData = async () => {
             const response = await
-
-            fetch('http://localhost:8000/api/shoes');
+                fetch('http://localhost:8000/api/shoeid/' + props.shoeid);
             const data = await response.json();
+
             setPicArray(data.map(shoe => shoe.image))
         };
         fetchData();

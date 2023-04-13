@@ -22,6 +22,7 @@ function runMigrations(pool, callback){
             pool.query(`CREATE TABLE IF NOT EXISTS shoes (
                 id SERIAL PRIMARY KEY,
                 name VARCHAR (255) NOT NULL,
+                shoeid INT,
                 price VARCHAR (26) NOT NULL,
                 gender VARCHAR (75),
                 image VARCHAR (500) NOT NULL,

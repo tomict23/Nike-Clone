@@ -17,6 +17,7 @@ const HeroContainer = (props) => {
 
   // State management for carousel buttons to cycle through array of images
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [highlyRated, setHighlyRated] = useState(null);
 
   // Default images to load on initial render
   useEffect(() => {
@@ -50,7 +51,26 @@ const HeroContainer = (props) => {
   const handleEnter = (image) => {
     props.setFocusedImage(image);
   };
-
+  useEffect(() => {
+    if(document.querySelector('.reviewLineText')){
+      const getReview = document.querySelector('.reviewLineText');
+      const toCheck = getReview.innerHTML;
+      const myRegex = /\d+/; 
+      const myInteger = parseInt(toCheck.match(myRegex)[0], 10);
+      if(myInteger >= 4){
+        setHighlyRated(
+          <div className= "HR">
+            <span className="star">&#9733;</span>
+            <p className='HRText'>
+              Highly Rated
+            </p>
+          </div>
+        );
+      }
+    }
+  }, []);
+  
+  
   // Rendering
   return (
     <div className="hero-container">

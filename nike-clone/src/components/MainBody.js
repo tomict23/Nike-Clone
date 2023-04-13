@@ -7,7 +7,7 @@ import RightBodyContainer from "./RightBodyContainer";
 
 const MainBody = () => {
   const [id, setId] = useState(1);
-
+  const [shoeid, setShoeId] = useState(1);
   // State management for which image is set to focus image
   const [focusImage, setFocusedImage] = useState();
 
@@ -36,6 +36,7 @@ const MainBody = () => {
             setFocusedImage ={setFocusedImage}
             thumbnailImages={thumbnailImages}
             setThumbnailImages={setThumbnailImages}  
+            shoeid = {shoeid}
           />
         </div>
       </div>
