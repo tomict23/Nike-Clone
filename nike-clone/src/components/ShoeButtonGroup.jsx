@@ -19,7 +19,6 @@ const ShoeButtonGroup = (props) => {
     const handleImageClick = (index) => {
         const id = index + 1;
         props.setId(id);
-        console.log(id);
         fetch(`http://localhost:8000/api/shoes/${id}`)
             .then(res => res.json())
             .then((data) => {
@@ -27,7 +26,6 @@ const ShoeButtonGroup = (props) => {
                 props.setThumbnailImages(data[0].image_array);
             })
             .catch((error) => console.error(error))
-            console.table(props.thumbnailImages)
     };
 
     return (

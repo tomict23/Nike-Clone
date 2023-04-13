@@ -4,6 +4,7 @@ import Price from './Price';
 import ShoeButtonGroup from "./ShoeButtonGroup";
 import FreeSR from "./FreeSR"
 import Reviews from './Reviews';
+import InformationBlock from "./InformationBlock";
 
 const RightBodyContainer = (props) => {
 
@@ -29,9 +30,12 @@ const RightBodyContainer = (props) => {
                 setThumbnailImages={props.setThumbnailImages}
                 shoeid = {props.shoeid}
             />
+            <InformationBlock/>
             <FreeSR/>
             <Reviews
-                id={props.id}/>
+                id={props.id}
+                data={props.data}/>
+                
         </div>
     )    
 }

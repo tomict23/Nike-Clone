@@ -112,3 +112,24 @@
     padding: 6px 6px 6px 6px;
     cursor: pointer;
 }
+.HR {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: white;
+    width: 140px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    pointer-events: none;
+}
+.HRstar {
+    margin-left: 15px;
+}
+.HRText {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 490;
+    padding-left: 10px;
+}

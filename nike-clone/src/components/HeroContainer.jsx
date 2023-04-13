@@ -44,31 +44,34 @@ const HeroContainer = (props) => {
     }
     setCurrentIndex(index);
     props.setFocusedImage(testArr[index]);
-    console.log(currentIndex);
   };
 
   // Sets focused image when mouse enters a thumbnail image
   const handleEnter = (image) => {
     props.setFocusedImage(image);
   };
+
   useEffect(() => {
-    if(document.querySelector('.reviewLineText')){
-      const getReview = document.querySelector('.reviewLineText');
-      const toCheck = getReview.innerHTML;
-      const myRegex = /\d+/; 
-      const myInteger = parseInt(toCheck.match(myRegex)[0], 10);
-      if(myInteger >= 4){
-        setHighlyRated(
-          <div className= "HR">
-            <span className="star">&#9733;</span>
-            <p className='HRText'>
-              Highly Rated
-            </p>
-          </div>
-        );
+    if(props.data){
+      const amtReviews = props.data.length;
+      let starArray = [];
+      for (let i = 0; i < amtReviews; i++) {
+          starArray.push(props.data[i].stars)
       }
+      const sumOfStars = starArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      const avgOfStars = Math.ceil(sumOfStars / starArray.length);
+        if(avgOfStars >= 4){
+          setHighlyRated(
+            <div className= "HR">
+              <span className="HRstar">&#9733;</span>
+              <p className='HRText'>
+                Highly Rated
+              </p>
+            </div>
+          );
+        }
     }
-  }, []);
+  }, [props.data]);
   
   
   // Rendering
@@ -79,6 +82,7 @@ const HeroContainer = (props) => {
         thumbnailImages={props.thumbnailImages}
       />
       <div className="hero-image-container">
+        {highlyRated}
         <img id="hero-img" src={props.focusImage} alt="" />
         <Carousel
           prevImage={prevImage}
