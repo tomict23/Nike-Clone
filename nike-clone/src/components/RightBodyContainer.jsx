@@ -42,9 +42,10 @@ const RightBodyContainer = (props) => {
             <Interest 
                 interest={props.interest}
             />
-            <InformationBlock
+            {props.currentShoe ? <InformationBlock
                 currentShoe = {props.currentShoe}
-            />
+            /> : null}
+            
             <FreeSR/>
             <Reviews
                 id={props.id}
