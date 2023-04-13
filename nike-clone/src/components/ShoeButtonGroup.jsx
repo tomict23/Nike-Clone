@@ -31,9 +31,9 @@ const ShoeButtonGroup = (props) => {
                 props.setPrice(data[0].price);
                 props.setSizeArray(data[0].size_array);
                 props.setCurrentShoe(data);
+                props.setInterest("INSERT HERE")
             })
             .catch((error) => console.error(error))
-            console.table(props.sizeArray)
     };
 
     return (

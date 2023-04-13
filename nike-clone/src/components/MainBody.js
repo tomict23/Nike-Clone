@@ -28,6 +28,9 @@ const MainBody = () => {
   //State management for shoe price:
   const [price, setPrice] = useState("");
 
+  //State management for interest:
+  const [interest, setInterest] = useState("");
+
   const [currentShoe, setCurrentShoe] = useState();
 
   return (
@@ -45,9 +48,8 @@ const MainBody = () => {
             setThumbnailImages={setThumbnailImages}
             data= {data}
             setSizeArray={setSizeArray}
-            sizeArray={sizeArray}
             setPrice={setPrice}
-            price={price}
+            setInterest={setInterest}
           />
         </div>
 
@@ -67,6 +69,8 @@ const MainBody = () => {
             setSizeArray={setSizeArray}
             price={price}
             setPrice={setPrice}
+            interest={interest}
+            setInterest={setInterest}
           />
         </div>
       </div>
