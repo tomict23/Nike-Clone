@@ -2,7 +2,6 @@ import React, { useState , useEffect } from 'react';
 import "../styles/Reviews.css";
 const Reviews = (props) => {
     const [active, setActive] = useState(false);
-    const [data, setData] = useState();
     function click() {
         if(!active) {
             setActive(true);
@@ -10,19 +9,14 @@ const Reviews = (props) => {
             setActive(false);
         } 
     }
-    useEffect(() => {
-        fetch("http://localhost:8000/api/review/" + props.id)
-        .then(response => response.json())
-        .then((data) => setData(data))
-        .catch(error => console.error(error));
-    }, []);
+
 
     
-    if(data) {
-        const amtReviews = data.length;
+    if(props.data) {
+        const amtReviews = props.data.length;
         let starArray = [];
         for (let i = 0; i < amtReviews; i++) {
-            starArray.push(data[i].stars)
+            starArray.push(props.data[i].stars)
         }
         const sumOfStars = starArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
         const avgStars = Math.round((sumOfStars / starArray.length) * 10) / 10;
@@ -61,63 +55,63 @@ const Reviews = (props) => {
                     </div>
                     <div className="reviewSingle">
                         <p className='reviewTitle'>
-                        {data[0].title}
+                        {props.data[0].title}
                         </p>
                         <div className='reviewLine1'>
                             <div className="stars2">
-                                <span style={data[0].stars >= 1 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[0].stars >= 2 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[0].stars >= 3 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[0].stars >= 4 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[0].stars >= 5 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[0].stars >= 1 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[0].stars >= 2 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[0].stars >= 3 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[0].stars >= 4 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[0].stars >= 5 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
                             </div>
                             <div className='reviewText'>
-                            {data[0].user_name} - {data[0].date_created}
+                            {props.data[0].user_name} - {props.data[0].date_created}
                             </div>
                         </div>
                         <div className='reviewLine2'>
-                            {data[0].summary}
+                            {props.data[0].summary}
                         </div>
                        
                     </div>
                     <div className="reviewSingle">
                         <p className='reviewTitle'>
-                           {data[1].title}
+                           {props.data[1].title}
                         </p>
                         <div className='reviewLine1'>
                             <div className="stars2">
-                                <span style={data[1].stars >= 1 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[1].stars >= 2 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[1].stars >= 3 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[1].stars >= 4 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[1].stars >= 5 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[1].stars >= 1 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[1].stars >= 2 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[1].stars >= 3 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[1].stars >= 4 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[1].stars >= 5 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
                             </div>
                             <div className='reviewText'>
-                            {data[1].user_name} - {data[1].date_created}
+                            {props.data[1].user_name} - {props.data[1].date_created}
                             </div>
                         </div>
                         <div className='reviewLine2'>
-                        {data[1].summary}
+                        {props.data[1].summary}
                         </div>
                     </div>
                     <div className="reviewSingle">
                         <p className='reviewTitle'>
-                        {data[2].title}
+                        {props.data[2].title}
                         </p>
                         <div className='reviewLine1'>
                             <div className="stars2">
-                                <span style={data[2].stars >= 1 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[2].stars >= 2 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[2].stars >= 3 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
-                                <span style={data[2].stars >= 4 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}}className="star2">&#9733;</span>
-                                <span style={data[2].stars >= 5 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[2].stars >= 1 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[2].stars >= 2 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[2].stars >= 3 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
+                                <span style={props.data[2].stars >= 4 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}}className="star2">&#9733;</span>
+                                <span style={props.data[2].stars >= 5 ? {color: 'black'} : {color: 'rgb(146, 146, 146)'}} className="star2">&#9733;</span>
                             </div>
                             <div className='reviewText'>
-                            {data[2].user_name} - {data[2].date_created}
+                            {props.data[2].user_name} - {props.data[2].date_created}
                             </div>
                         </div>
                         <div className='reviewLine2'>
-                        {data[2].summary}
+                        {props.data[2].summary}
                         </div>
                     </div>
                     <div className='moreReviews'>

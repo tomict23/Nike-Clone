@@ -31,8 +31,18 @@ app.get('/api/shoes', (req, res, next) => {
 
 app.get('/api/shoes/:id', (req, res, next) =>{
     const id = Number.parseInt(req.params.id);
-
     pool.query('SELECT * FROM shoes WHERE id=$1', [id], (err, result) => {
+        if (err){
+            res.status(404).send(err);
+        } else {
+            const shoe = result.rows;
+            res.status(200).send(shoe);
+        }
+    })
+})
+app.get('/api/shoeid/:id', (req, res, next) =>{
+    const id = Number.parseInt(req.params.id);
+    pool.query('SELECT * FROM shoes WHERE shoeid=$1', [id], (err, result) => {
         if (err){
             res.status(404).send(err);
         } else {
@@ -75,6 +85,7 @@ app.get('/api/:word', (req, res, next) => {
 app.post('/api/shoes/', (req, res) => {
     const name = req.body.name;
     const price = req.body.price;
+    const gender = req.body.gender;
     const image = req.body.image;
     const image_array = req.body.image_array;
     const description = req.body.description;
@@ -82,11 +93,11 @@ app.post('/api/shoes/', (req, res) => {
     const style = req.body.style;
     const size_array = req.body.size_array;
 
-    if (!name || !price || !image || !image_array || !description || !color_description || !style || !size_array){
+    if (!name || !price || !gender || !image || !image_array || !description || !color_description || !style || !size_array){
         return res.status(407).send("Error in post data or insufficient data provided for post route shoes")
     }
 
-    pool.query('INSERT INTO shoes (name, price, image, image_array, thumbnail_image_array, description, color_description, style, size_array) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING*;', [name, price, image, image_array, description, color_description, style, size_array], (err, result) => {
+    pool.query('INSERT INTO shoes (name, price, gender, image, image_array, description, color_description, style, size_array) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING*;', [name, price, gender, image, image_array, description, color_description, style, size_array], (err, result) => {
         if (err) {
             res.status(409).send(err);
         } else {

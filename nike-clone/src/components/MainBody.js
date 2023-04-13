@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
 import "../styles/App.css";
 import "../styles/MainBody.css";
@@ -7,12 +7,29 @@ import RightBodyContainer from "./RightBodyContainer";
 
 const MainBody = () => {
   const [id, setId] = useState(1);
+  const [shoeid, setShoeId] = useState(1);
+  const [data, setData] = useState();
 
+  useEffect(() => {
+    fetch("http://localhost:8000/api/review/" + id)
+    .then(response => response.json())
+    .then((data) => setData(data))
+    .catch(error => console.error(error));
+}, []);
   // State management for which image is set to focus image
   const [focusImage, setFocusedImage] = useState();
 
   //State management for thumbnail images:
   const [thumbnailImages, setThumbnailImages] = useState([]);
+
+  //State management for shoe sizes array:
+  const [sizeArray, setSizeArray] = useState([]);
+
+  //State management for shoe price:
+  const [price, setPrice] = useState("");
+
+  //State management for interest:
+  const [interest, setInterest] = useState("");
 
   return (
 
@@ -25,6 +42,10 @@ const MainBody = () => {
             setFocusedImage ={setFocusedImage}
             thumbnailImages={thumbnailImages}
             setThumbnailImages={setThumbnailImages}
+            data= {data}
+            setSizeArray={setSizeArray}
+            setPrice={setPrice}
+            setInterest={setInterest}
           />
         </div>
 
@@ -36,6 +57,14 @@ const MainBody = () => {
             setFocusedImage ={setFocusedImage}
             thumbnailImages={thumbnailImages}
             setThumbnailImages={setThumbnailImages}  
+            shoeid = {shoeid}
+            data = {data}
+            sizeArray={sizeArray}
+            setSizeArray={setSizeArray}
+            price={price}
+            setPrice={setPrice}
+            interest={interest}
+            setInterest={setInterest}
           />
         </div>
       </div>
