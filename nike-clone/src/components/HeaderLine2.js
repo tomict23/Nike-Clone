@@ -32,62 +32,86 @@ const HeaderLine2 = () => {
     setHovered(false)
   }
   const mouseOverMenu = () => {
-    setShowDropdown(true)
-    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(0.5)'
-    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(0.5)'
+    setShowDropdown(true);
+    document.querySelector('.main-body-container').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0.2)'
+    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
   }
   const mouseOutMenu = () => {
     setShowDropdown(false)
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0)'
     document.querySelector('.main-body-container').style.filter = 'none';
     document.querySelector('.Footer').style.filter = 'none';
   }
   const mouseOverMenu1 = () => {
     setShowDropdown1(true)
-    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(0.5)'
-    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(0.5)'
+    document.querySelector('.main-body-container').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0.2)'
+    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
   }
   const mouseOutMenu1 = () => {
     setShowDropdown1(false)
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0)'
     document.querySelector('.main-body-container').style.filter = 'none';
     document.querySelector('.Footer').style.filter = 'none';
   }
   const mouseOverMenu2 = () => {
     setShowDropdown2(true)
-    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(0.5)'
-    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(0.5)'
+    document.querySelector('.main-body-container').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0.2)'
+    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
   }
   const mouseOutMenu2 = () => {
     setShowDropdown2(false)
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0)'
     document.querySelector('.main-body-container').style.filter = 'none';
     document.querySelector('.Footer').style.filter = 'none';
   }
   const mouseOverMenu3 = () => {
     setShowDropdown3(true)
-    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(0.5)'
-    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(0.5)'
+    document.querySelector('.main-body-container').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0.2)'
+    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
   }
   const mouseOutMenu3 = () => {
     setShowDropdown3(false)
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0)'
     document.querySelector('.main-body-container').style.filter = 'none';
     document.querySelector('.Footer').style.filter = 'none';
   }
   const mouseOverMenu4 = () => {
     setShowDropdown4(true)
-    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(0.5)'
-    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(0.5)'
+    document.querySelector('.main-body-container').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0.2)'
+    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
   }
   const mouseOutMenu4 = () => {
     setShowDropdown4(false)
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0)'
     document.querySelector('.main-body-container').style.filter = 'none';
     document.querySelector('.Footer').style.filter = 'none';
   }
   const mouseOverMenu5 = () => {
     setShowDropdown5(true)
-    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(0.5)'
-    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(0.5)'
+    document.querySelector('.main-body-container').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0.2)'
+    document.querySelector('.main-body-container').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.filter = 'blur(5px) brightness(.8)'
+    document.querySelector('.Footer').style.transition = 'background-color 0.5s ease, filter 0.5s ease'
   }
   const mouseOutMenu5 = () => {
     setShowDropdown5(false)
+    document.querySelector('.main-body-container').style.backgroundColor = 'rgba(0,0,0,0)'
     document.querySelector('.main-body-container').style.filter = 'none';
     document.querySelector('.Footer').style.filter = 'none';
   }

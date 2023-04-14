@@ -1,3 +1,7 @@
+fieldset {
+    border: none;
+}
+
 .main-body-container {
     display: flex;
     justify-content: center;

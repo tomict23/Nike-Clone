@@ -112,27 +112,12 @@
     padding-bottom: 50px;
     z-index: 3;
     opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     pointer-events: none;
     font-family: inherit;
     cursor: auto;
     justify-content: center;
-  }
-
-  .dropdownHeader2::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(5, 5, 5);
-    filter: blur(1px);
-    opacity: 0.05;
-    z-index: -1;
-    box-shadow: 0 0 10px 10px rgba(2, 2, 2, 0.5);
-    pointer-events: none;
+    overflow: hidden;
+    animation: fade-out 0.5s;
   }
 
   .dropdownSection {
@@ -140,10 +125,19 @@
   }
 
   .dropdownHeader2.show {
+    animation: fade-in .5s;
     opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
   }
+  @keyframes fade-in {
+    from {opacity: 0; }
+    tp { opacity: 1; }
+  }
+  @keyframes fade-out {
+    from {opacity: 1; }
+    tp { opacity: 0; }
+  }
+
   .dropdownSectionHeader {
     font-size: 17px;
     padding-top: 10px;
