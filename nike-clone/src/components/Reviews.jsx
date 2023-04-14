@@ -3,10 +3,13 @@ import "../styles/Reviews.css";
 const Reviews = (props) => {
     const [active, setActive] = useState(false);
     function click() {
+
         if(!active) {
             setActive(true);
+            document.querySelector('.review-header').style.borderBottom = 'none';
         }else{
             setActive(false);
+            document.querySelector('.review-header').style.borderBottom = '2px solid rgba(0, 0, 0, 0.1)';
         } 
     }
 

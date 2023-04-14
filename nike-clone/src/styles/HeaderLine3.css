@@ -83,7 +83,7 @@
   }
   .arrow {
     position: absolute;
-    margin-top: .5%;
+    margin-top: .2%;
     border: none;
     background-color: inherit;
     margin-left: -8%;
@@ -93,7 +93,7 @@
   }
   .arrow2 {
     position: absolute;
-    margin-top: .5%;
+    margin-top: .2%;
     border: none;
     background-color: inherit;
     margin-left: 30%;

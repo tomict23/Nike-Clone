@@ -1,24 +1,31 @@
-import React, { useEffect, useState } from "react";
-import Members from "./members";
-import Price from "./Price";
-import ShoeButtonGroup from "./ShoeButtonGroup";
-import FreeSR from "./FreeSR";
-import Reviews from "./Reviews";
-import InformationBlock from "./InformationBlock";
-import SizeGuide from "./SizeGuide";
-import Interest from "./Interest";
-import AddToCart from "./AddToCart";
-import Favorite from "./Favorite";
+import React, { useEffect, useState } from 'react';
+import Members from './members';
+import Price from './Price';
+import ShoeButtonGroup from './ShoeButtonGroup';
+import FreeSR from './FreeSR';
+import Reviews from './Reviews';
+import InformationBlock from './InformationBlock';
+import SizeGuide from './SizeGuide';
+import Interest from './Interest';
+import AddToCart from './AddToCart';
+import Favorite from './Favorite';
 
 const RightBodyContainer = (props) => {
   const [memberAccess, setMemberAccess] = useState(true);
 
   return (
-    <div>
+    <div id='right-body-container'>
       {memberAccess && <Members />}
-      <h2>Air Jordan 1 Mid</h2>
-      <h3>Men's Shoes</h3>
-      <Price setPrice={props.setPrice} price={props.price} />
+      <p style={{ margin: '0 0 5px 0', 'font-weight': '450', 'font-size': '28px', 'font-family': '"Helvetica Neue",Helvetica,Arial,sans-serif' }}>
+        Air Jordan 1 Mid
+      </p>
+      <p style={{ margin: '0 0 20px 0', 'font-weight': '450', 'font-size': '16px', 'font-family': '"Helvetica Neue",Helvetica,Arial,sans-serif' }}>
+        Men's Shoes
+      </p>
+      <Price
+        setPrice={props.setPrice}
+        price={props.price}
+      />
       <ShoeButtonGroup
         setCurrentShoe={props.setCurrentShoe}
         currentShoe={props.currentShoe}
@@ -38,12 +45,13 @@ const RightBodyContainer = (props) => {
       <Interest interest={props.interest} />
       <AddToCart />
       <Favorite />
-      {props.currentShoe ? (
-        <InformationBlock currentShoe={props.currentShoe} />
-      ) : null}
+      {props.currentShoe ? <InformationBlock currentShoe={props.currentShoe} /> : null}
 
       <FreeSR />
-      <Reviews id={props.id} data={props.data} />
+      <Reviews
+        id={props.id}
+        data={props.data}
+      />
     </div>
   );
 };
