@@ -81,20 +81,18 @@
 .pic-container{
     display: inline-block;
     cursor: pointer;
-    min-width: 60px;
-    max-width: 70px;
+    min-width: 70px;
+    max-height: 75px;
     white-space: normal;
     margin-right: 6px;
-    /* position: relative;
-    flex-direction: row;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    gap: 8px;
-    min-width: 50px;
-    max-width: 50px;
-    height: 100%;
-    overflow-y: scroll;  */
+    
 }
+
+.pic-container:hover, .pic-container:focus {
+    border-width: 2.3px;
+    font-weight: bold;
+}
+
 .arrowContainer {
     display: flex;
     justify-content: space-between;
@@ -135,6 +133,7 @@
 }
 .size-guide-text {
     float: right;
+    margin-right: 20px;
 }
 
 .select-size-text {
@@ -156,18 +155,57 @@
 }
 
 .shoe-size-select {
-    width: 180px; 
+    width: 215px; 
     height: 50px; 
     background-color: white; 
-    /* opacity: 20%;
-    background-color:gray; */
     text-align: center; 
     border-width: 1px;
     border-color: grey;
     margin-top: 5px;
     margin-right: 5px;
-    
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+.shoe-size-select:hover, .shoe-size-select:focus {
+    border-width: 2.3px;
+    font-weight: bold;
+}
+
+.shoe-size-select span {
+    font-weight: normal;
+}
+
+.interest {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Helvetica, sans-serif;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+}
+
+.interest-payments {
+    margin-bottom: 0.005em;
+    font-family: Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: "Klarna Headline";
+    font-display: swap;
+    font-weight: 700;
+    src: url("https://x.klarnacdn.net/ui/fonts/v1.3/KlarnaHeadline-Bold.woff2") format('woff2'),url("https://x.klarnacdn.net/ui/fonts/v1.3/KlarnaHeadline-Bold.woff") format('woff')
+}
+
+.klarna {
+    font-family: "Klarna Headline";
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    font-size: 16px;
+    color: #17120f;
+    
 }
 
 .add-to-cart-btn {
@@ -210,4 +248,17 @@
     font-size: 16px;
     line-height: 24px;
     cursor: pointer;
+
+.learn-more {
+    text-decoration: underline;
+    white-space: nowrap;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 510;
+    letter-spacing: .3px;
+
 }
