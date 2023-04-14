@@ -31,7 +31,9 @@ const ShoeButtonGroup = (props) => {
                 props.setPrice(data[0].price);
                 props.setSizeArray(data[0].size_array);
                 props.setCurrentShoe(data);
-                props.setInterest("INSERT HERE")
+                //To caculate payment options for interest-free 4 payments
+                const num = (((parseFloat(data[0].price.replace(/[^\d.-]/g, ''))) / 4).toFixed(2));
+                props.setInterest("$" + num);
             })
             .catch((error) => console.error(error))
     };
