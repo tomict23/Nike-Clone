@@ -1,8 +1,8 @@
 .suggested-content {
-  /* position: absolute; */
   /* border: 1px solid rgb(166, 255, 0); */
   overflow-x: hidden;
   margin: 60px 9.5vw;
+  padding-right: 0.7vw;
 }
 
 #slides-menu {
@@ -11,8 +11,6 @@
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 10px;
-  /* padding-left: 48px;
-  padding-right: 48px; */
   /* border: 1px solid rgb(255, 136, 0); */
 }
 
@@ -30,29 +28,24 @@
   align-items: center;
   border-radius: 50%;
   background-color: #e5e5e5;
+  cursor: pointer;
 }
 
 #card-slider {
   height: 740px;
-  /* z-index: 5; */
   display: flex;
   flex-direction: row;
   gap: 12px;
   /* border: 1px solid rgb(0, 110, 255); */
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-
-  /* padding-left: 48px; */
-
-  /* scroll-snap-align: 50px; */
 }
 
 #card-slider::-webkit-scrollbar {
   width: 0px;
   height: 15px;
-  /* background-color: transparent; */
 }
 #card-slider::-webkit-scrollbar-thumb {
   background-color: #757575;
@@ -65,12 +58,9 @@
 
 .suggested-card {
   /* border: 1px solid red; */
-  /* width: var(--height);
-  height: var(--height); */
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  /* gap: 5px; */
   scroll-snap-align: center;
 }
 
@@ -78,7 +68,6 @@
   display: block;
   height: 26.04vw;
   width: 26.04vw;
-  /* width: 334.18px; */
   object-fit: cover;
   margin-bottom: 10px;
 }
