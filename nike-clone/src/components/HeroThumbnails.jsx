@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
 const HeroThumbnails = (props) => {
   return (
-    <div className="thumbnail-container">
+    <div className='thumbnail-container'>
       {props.thumbnailImages.map((image, index) => (
         <img
-          className="thumbnail"
+          className='thumbnail'
           src={image}
           key={index}
-          alt=""
+          alt=''
           onMouseEnter={() => props.handleEnter(image)}
         />
       ))}
