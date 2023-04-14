@@ -40,6 +40,7 @@ app.get('/api/shoes/:id', (req, res, next) =>{
         }
     })
 })
+
 app.get('/api/shoeid/:id', (req, res, next) =>{
     const id = Number.parseInt(req.params.id);
     pool.query('SELECT * FROM shoes WHERE shoeid=$1', [id], (err, result) => {
@@ -51,6 +52,7 @@ app.get('/api/shoeid/:id', (req, res, next) =>{
         }
     })
 })
+
 
 //Query provides an extra column on return of query, column 'shoes_name' which is pulled from parent table 'shoes'
 app.get('/api/review', (req, res, next) => {
