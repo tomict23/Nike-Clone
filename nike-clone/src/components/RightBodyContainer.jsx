@@ -22,6 +22,8 @@ const RightBodyContainer = (props) => {
                 price = {props.price}
             />
             <ShoeButtonGroup 
+                setCurrentShoe={props.setCurrentShoe}
+                currentShoe={props.currentShoe}
                 setPrice={props.setPrice} 
                 id={props.id} 
                 setId={props.setId} 
@@ -40,7 +42,10 @@ const RightBodyContainer = (props) => {
             <Interest 
                 interest={props.interest}
             />
-            <InformationBlock/>
+            {props.currentShoe ? <InformationBlock
+                currentShoe = {props.currentShoe}
+            /> : null}
+            
             <FreeSR/>
             <Reviews
                 id={props.id}

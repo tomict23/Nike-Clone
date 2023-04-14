@@ -31,12 +31,16 @@ const MainBody = () => {
   //State management for interest:
   const [interest, setInterest] = useState("");
 
+  const [currentShoe, setCurrentShoe] = useState();
+
   return (
 
     <div className="main-body-container">
       <div className="main-body">
         <div className="main-body-left">
           <HeroContainer 
+            setCurrentShoe={setCurrentShoe}
+            currentShoe={currentShoe}
             id={id}
             focusImage = {focusImage}
             setFocusedImage ={setFocusedImage}
@@ -50,7 +54,9 @@ const MainBody = () => {
         </div>
 
         <div className="main-body-right">
-          <RightBodyContainer 
+          <RightBodyContainer
+            setCurrentShoe={setCurrentShoe}
+            currentShoe={currentShoe} 
             setId={setId}
             id={id}
             focusImage = {focusImage}
