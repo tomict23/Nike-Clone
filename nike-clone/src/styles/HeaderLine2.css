@@ -104,11 +104,17 @@
     padding: 6px 6px 6px 6px;
     cursor: pointer;
   }
+  .heart:hover {
+    background: #d6d6d6;
+  }
   .cart {
     background: #ffffff;
     border-radius: 20px;
     padding: 6px 6px 6px 6px;
     cursor: pointer;
+  }
+  .cart:hover {
+    background: #d6d6d6;
   }
 
   .dropdownHeader2 {
