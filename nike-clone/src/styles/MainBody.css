@@ -106,17 +106,20 @@ fieldset {
 }
 
 .pic-container {
+    all:unset;
   cursor: pointer;
   width: 70px;
   height: 70px;
   border-radius: 5px;
   object-fit: cover;
   border: 1px solid transparent;
+    border-radius: 4px;
 }
 
 .pic-container:hover,
 .pic-container:focus {
-  border: 1px solid black;
+  border-width: 2.3px;
+  font-weight: bold;
 }
 
 .arrowContainer {
@@ -191,19 +194,17 @@ fieldset {
     background-color:gray; */
   text-align: center;
   border-width: 1px;
-  border-color: rgba(190, 190, 190, 0.361);
+  border-color: grey;
   margin-top: 5px;
   margin-right: 5px;
 }
-.shoe-size-select:hover,
-.shoe-size-select:focus {
-  border-color: black;
-  border-width: 1.5px;
-  font-weight: bold;
+.shoe-size-select:hover, .shoe-size-select:focus {
+    border-width: 2.3px;
+    font-weight: bold;
 }
 
 .shoe-size-select span {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .interest {

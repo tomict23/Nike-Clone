@@ -28,28 +28,22 @@ const ShoeButtonGroup = (props) => {
         props.setPrice(data[0].price);
         props.setSizeArray(data[0].size_array);
         props.setCurrentShoe(data);
-        //To caculate payment options for interest-free 4 payments
+        //To calculate payment options for interest-free 4 payments
         const num = (parseFloat(data[0].price.replace(/[^\d.-]/g, '')) / 4).toFixed(2);
         props.setInterest('$' + num);
       })
       .catch((error) => console.error(error));
   };
 
-  return (
-    <>
-      <div className='color-options-block'>
-        {picArray.map((image, index) => (
-          <img
-            className='pic-container'
-            key={index}
-            src={image}
-            alt={''}
-            onClick={() => handleImageClick(index)}
-          />
-        ))}
-      </div>
-    </>
-  );
-};
+    return (
+        <>
+            <fieldset >
+                {picArray.map((image, index) => (
+                    <img className='pic-container' key={index} src={image} alt={''} onClick={() => handleImageClick(index)} />
+                ))}
+            </fieldset>
+        </>
+    )
+}
 
 export default ShoeButtonGroup;
