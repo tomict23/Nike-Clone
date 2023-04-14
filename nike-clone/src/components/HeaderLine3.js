@@ -7,7 +7,7 @@ const HeaderLine3 = () => {
   const [shown1, setShown1] = useState(true);
   const [shown2, setShown2] = useState(false);
   const [shown3, setShown3] = useState(false);
-  const [intervalSet, setIntervalSet] = useState(null);
+  const [beginning, setBeginning] = useState(true);
   const hoveredOver = (event) => {
     setHovered(true);
   }
@@ -28,50 +28,57 @@ const HeaderLine3 = () => {
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (!beginning){
+      return;
+    }
+    setTimeout(() => {
       if(shown1){
         setShown1(false);
         setShown2(true);
+        setShown3(false);
       }else if(shown2) {
+        setShown1(false);
         setShown2(false);
         setShown3(true);
       }else if(shown3){
         setShown3(false);
+        setShown2(false);
         setShown1(true);
       }
-
     }, 5000);
-    setIntervalSet(interval);
-    return () => clearInterval(interval);
-  
-  }, []);
-    
+  }, [shown1, shown2, shown3])
+ 
+
   function resetLeft() {
-    clearInterval(intervalSet);
-    setIntervalSet(null);
+    setBeginning(false);
     if(shown1){
       setShown1(false);
+      setShown2(false);
       setShown3(true);
     }else if(shown3) {
       setShown3(false);
       setShown2(true);
+      setShown1(false);
     }else if(shown2){
+      setShown3(false);
       setShown2(false);
       setShown1(true);
     }
   }
 
   function resetRight() {
-    clearInterval(intervalSet);
-    setIntervalSet(null);
+    setBeginning(false);
     if(shown1){
       setShown1(false);
       setShown2(true);
+      setShown3(false);
     }else if(shown2) {
+      setShown1(false);
       setShown2(false);
       setShown3(true);
     }else if(shown3){
       setShown3(false);
+      setShown2(false);
       setShown1(true);
     }
   }
