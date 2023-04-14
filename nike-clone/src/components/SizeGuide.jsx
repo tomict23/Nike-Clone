@@ -11,7 +11,9 @@ const SizeGuide = (props) => {
             <div className='shoe-size-boxes-container'>
                 <div className='shoe-size-boxes'>
                     {props.sizeArray.map((size, index) => (
-                        <button className='shoe-size-select' key={index}>{size}</button>
+                        <button className='shoe-size-select' key={index}>
+                            <span>{size}</span>
+                        </button>
                     ))}
                 </div>
             </div>

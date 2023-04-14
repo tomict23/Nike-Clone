@@ -1,3 +1,7 @@
+fieldset {
+  border: none;
+}
+
 .main-body-container {
   display: flex;
   justify-content: center;
@@ -82,20 +86,18 @@
 .pic-container {
   display: inline-block;
   cursor: pointer;
-  min-width: 60px;
-  max-width: 70px;
+  min-width: 70px;
+  max-height: 75px;
   white-space: normal;
   margin-right: 6px;
-  /* position: relative;
-    flex-direction: row;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    gap: 8px;
-    min-width: 50px;
-    max-width: 50px;
-    height: 100%;
-    overflow-y: scroll;  */
 }
+
+.pic-container:hover,
+.pic-container:focus {
+  border-width: 2.3px;
+  font-weight: bold;
+}
+
 .arrowContainer {
   display: flex;
   justify-content: space-between;
