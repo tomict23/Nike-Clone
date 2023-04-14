@@ -79,18 +79,19 @@
 }
 
 .pic-container{
+    all:unset;
     display: inline-block;
     cursor: pointer;
     min-width: 70px;
     max-height: 75px;
     white-space: normal;
     margin-right: 6px;
+    border-radius: 4px;
     
 }
 
-.pic-container:hover, .pic-container:focus {
-    border-width: 2.3px;
-    font-weight: bold;
+.pic-container:hover .pic-container {
+    border:2px;
 }
 
 .arrowContainer {
@@ -160,7 +161,7 @@
     background-color: white; 
     text-align: center; 
     border-width: 1px;
-    border-color: grey;
+    border-color: rgb(190, 187, 187);
     margin-top: 5px;
     margin-right: 5px;
     border-radius: 4px;
@@ -168,12 +169,14 @@
 }
 
 .shoe-size-select:hover, .shoe-size-select:focus {
-    border-width: 2.3px;
+    border-width: 2px;
+    border-color: black;
     font-weight: bold;
 }
 
 .shoe-size-select span {
     font-weight: normal;
+    font-size: 16px;
 }
 
 .interest {

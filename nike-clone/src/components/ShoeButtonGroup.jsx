@@ -42,7 +42,7 @@ const ShoeButtonGroup = (props) => {
         <>
             <fieldset>
                 {picArray.map((image, index) => (
-                    <img className='pic-container' key={index} src={image} alt={''} onClick={() => handleImageClick(index)} />
+                    <img className='pic-container' key={index} src={image} alt={''} onClick={() => handleImageClick(index)}/>
                 ))}
             </fieldset>
         </>
