@@ -1,158 +1,162 @@
-.main-body-container {
-    display: flex;
-    justify-content: center;
+fieldset {
+  border: none;
+}
 
+.main-body-container {
+  display: flex;
+  justify-content: center;
 }
 
 .main-body {
-    display: flex;
-    height: auto;
+  display: flex;
+  height: auto;
 
-    width: 1200px;
+  width: 1200px;
 }
 
 .main-body-left {
-    width: 744px;
+  width: 744px;
 
-    height: 100%;
+  height: 100%;
 }
 
 .main-body-right {
-    height: 100%;
-    width: 456px;
-
+  height: 100%;
+  width: 456px;
 }
 
 .hero-container {
-    /* width: calc(100% - 456px); */
-    height: 669px;
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-    align-content: flex-start;
-    /* position: sticky; */
-    top: 40px;
-    padding-left: 48px;
-    margin: 48px 8px 0px 8px;
+  /* width: calc(100% - 456px); */
+  height: 669px;
+  display: flex;
+  flex-direction: row;
+  /* gap: 16px; */
+  align-content: flex-start;
+  position: sticky;
+  top: 40px;
+  padding-left: 48px;
+  margin: 48px 8px 0px 8px;
 }
 
 .thumbnail-container {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    gap: 8px;
-    min-width: 60px;
-    max-width: 60px;
-    height: 100%;
-    overflow-y: scroll; 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  overflow-y: scroll;
+  height: fit-content;
+  /* border: 1px solid red; */
 }
 
 .thumbnail-container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .hero-image-container {
-    width: 535px;
-    height: 668.75px;
+  width: 535px;
+  height: 668.75px;
 }
 
 #hero-img {
-    border-radius: 5px;
-    width: 535px;
-    height: 668.75px
+  border-radius: 5px;
+  width: 535px;
+  height: 668.75px;
 }
 
 .thumbnail {
-    border-radius: 5px;
-    transition: 0.1s ease-in-out;
+  border-radius: 5px;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  transition: all 0.1s ease-in-out;
 }
 
-.thumbnail:hover {
-    scale: 1.2 1.2 1;
+.thumbnail:hover,
+.thumbnail:active {
+  z-index: 50;
+  scale: 1.2 1.2 1;
+  filter: brightness(0.8);
+  /* transition: 50ms; */
 }
 
 .members {
-    color: rgb(153, 46, 0);
-    margin-top: 20px;
+  color: rgb(153, 46, 0);
+  margin-top: 20px;
 }
 
-.pic-container{
+.pic-container {
     all:unset;
-    display: inline-block;
-    cursor: pointer;
-    min-width: 70px;
-    max-height: 75px;
-    white-space: normal;
-    margin-right: 6px;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 70px;
+  max-height: 75px;
+  white-space: normal;
+  margin-right: 6px;
     border-radius: 4px;
-    
 }
 
-.pic-container:hover .pic-container {
-    border:2px;
+.pic-container:hover, .pic-container:focus {
+    border-width: 2.3px;
+    font-weight: bold;
 }
 
 .arrowContainer {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 25px;
-    margin-left: 430px;
-    margin-top: -60px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 25px;
+  margin-left: 430px;
+  margin-top: -60px;
 }
 .icon1 {
-    align-items: center;
-    text-align: center;
-    border-radius: 20px;
-    background: white;
-    height: 24px;
-    width: 24px;
-    padding: 6px 6px 6px 6px;
-    cursor: pointer;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  background: white;
+  height: 24px;
+  width: 24px;
+  padding: 6px 6px 6px 6px;
+  cursor: pointer;
 }
 .HR {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background: white;
-    width: 140px;
-    height: 40px;
-    margin-left: 10px;
-    margin-top: 10px;
-    pointer-events: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: white;
+  width: 140px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 10px;
+  pointer-events: none;
 }
 .HRstar {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 .HRText {
-    margin-top: 16px;
-    font-size: 14px;
-    font-weight: 490;
-    padding-left: 10px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 490;
+  padding-left: 10px;
 }
 .size-guide-text {
-    float: right;
-    margin-right: 20px;
+  float: right;
 }
 
 .select-size-text {
-    float: left;
+  float: left;
 }
 
-
-.shoe-size-boxes-container{
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(1, 1, 1fr);
-    grid-gap: 7px;
+.shoe-size-boxes-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(1, 1, 1fr);
+  grid-gap: 7px;
 }
 
 .shoe-size-boxes {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .shoe-size-select {
@@ -161,13 +165,12 @@
     background-color: white; 
     text-align: center; 
     border-width: 1px;
-    border-color: rgb(190, 187, 187);
+    border-color: grey;
     margin-top: 5px;
     margin-right: 5px;
     border-radius: 4px;
     cursor: pointer;
 }
-
 .shoe-size-select:hover, .shoe-size-select:focus {
     border-width: 2px;
     border-color: black;
@@ -211,6 +214,47 @@
     
 }
 
+.add-to-cart-btn {
+    width: 100%;
+    min-height: 60px;
+    padding: 18px 24px;
+    border-radius: 30px;
+    border: 1.5px solid transparent;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: black;
+    color: white;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.favorite-btn {
+    width: 100%;
+    min-height: 60px;
+    padding: 18px 24px;
+    border-radius: 30px;
+    border: 1.5px solid black;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: white;
+    color: black;
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+}
 .learn-more {
     text-decoration: underline;
     white-space: nowrap;
@@ -222,4 +266,5 @@
     font-size: 16px;
     font-weight: 510;
     letter-spacing: .3px;
+
 }

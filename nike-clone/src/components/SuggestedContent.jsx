@@ -94,29 +94,49 @@ const SuggestedContent = () => {
   const ref = useRef();
   const prevButton = useRef();
   const nextButton = useRef();
-  const [index, setIndex] = useState(1);
+  let index = 1;
   const scroll = (scrollOffset) => {
     if (scrollOffset === 400) {
-      setIndex((index += 1));
+      ref.current.style.overflowX = 'scroll';
+      index += 1;
       ref.current.scrollLeft += scrollOffset;
-    } else {
-      setIndex((index -= 1));
+      if (index < 2) {
+        index = 1;
+        nextButton.current.style.opacity = '1';
+        prevButton.current.style.opacity = '0.25';
+        prevButton.current.style.cursor = 'default';
+      } else if (index > 9) {
+        index = 10;
+        nextButton.current.style.opacity = '0.25';
+        prevButton.current.style.opacity = '1';
+        nextButton.current.style.cursor = 'default';
+      } else {
+        nextButton.current.style.opacity = '1';
+        prevButton.current.style.opacity = '1';
+        nextButton.current.style.cursor = 'pointer';
+        prevButton.current.style.cursor = 'pointer';
+      }
+    }
+    if (scrollOffset === -400) {
+      index -= 1;
       ref.current.scrollLeft += scrollOffset;
+      if (index < 2) {
+        index = 1;
+        nextButton.current.style.opacity = '1';
+        prevButton.current.style.opacity = '0.25';
+        prevButton.current.style.cursor = 'default';
+      } else if (index > 9) {
+        index = 10;
+        nextButton.current.style.opacity = '0.25';
+        prevButton.current.style.opacity = '1';
+        nextButton.current.style.cursor = 'default';
+      } else {
+        nextButton.current.style.opacity = '1';
+        prevButton.current.style.opacity = '1';
+        nextButton.current.style.cursor = 'pointer';
+        prevButton.current.style.cursor = 'pointer';
+      }
     }
-    if (index === 0 || index === 1) {
-      setIndex(1);
-      prevButton.current.style.opacity = '0.25';
-    }
-    if (index >= 2 || index <= 9) {
-      prevButton.current.style.opacity = '1';
-      nextButton.current.style.opacity = '1';
-    }
-    if (index === 11 || index === 10) {
-      setIndex(10);
-      nextButton.current.style.opacity = '0.25';
-    }
-
-    console.log(index);
   };
 
   return (
