@@ -12,7 +12,12 @@ const ShoeButtonGroup = (props) => {
     fetchData();
   }, []);
 
-  const handleImageClick = (index) => {
+  const handleImageClick = (event, index) => {
+    const containers = document.querySelectorAll('.pic-container');
+    for (let i = 0; i < containers.length; i++) {
+      containers[i].style.border = 'none';
+    }
+    event.target.style.border = '1px solid black';
     const id = index + 1;
     props.setId(id);
     if (id === 1) {
@@ -44,7 +49,7 @@ const ShoeButtonGroup = (props) => {
             key={index}
             src={image}
             alt={''}
-            onClick={() => handleImageClick(index)}
+            onClick={(event) => handleImageClick(event, index)}
           />
         ))}
       </div>
